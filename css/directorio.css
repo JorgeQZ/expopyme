@@ -1,4 +1,106 @@
 .banner_hero {
   background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
+  min-height: 600px;
+  background-image: url(../img/directorio_banner.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.banner_hero h1 {
+  font-weight: bold !important;
+  font-size: 6em !important;
+}
+
+.directorio__cont {
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.directorio__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 30%;
+          flex: 1 0 30%;
+  margin: 1.5%;
+  max-width: 380px;
+  background-color: #fff;
+}
+.directorio__item__logo {
+  text-align: center;
+  margin: 0 auto;
+  max-height: 100px;
+}
+.directorio__item__title {
+  text-transform: uppercase;
+  color: #e5202e;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 20px;
+  line-height: 1;
+}
+.directorio__item__expositor {
+  font-size: 12px;
+  color: #e5202e;
+  line-height: 1;
+  margin: 0;
+}
+.directorio__item__puesto {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1;
+  color: #870f25;
+  font-style: italic;
+}
+.directorio__item__descripcion {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1;
+  color: #e5202e;
+  margin: 10px 0;
+}
+.directorio__item__sociales {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+.directorio__item__sociales__link {
+  border-radius: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #e5202e;
+  width: 40px;
+  height: 40px;
+}
+.directorio__item__sociales__link img {
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
 }

@@ -218,6 +218,13 @@ require expopyme_PATH . '/inc/user-profile.php';
 require expopyme_PATH . '/inc/custom-widgets.php';
 
 
+/**
+ * Directorio PostType
+ */
+require expopyme_PATH . '/inc/directorio-posttype.php';
+
+
+
 /////////////////////////////////////////////////////
              /* Producto  PostType */
 /////////////////////////////////////////////////////
