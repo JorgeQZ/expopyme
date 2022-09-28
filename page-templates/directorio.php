@@ -47,19 +47,19 @@ get_header(); ?>
 
                 <div class="directorio__item__sociales">
                     <a href="<?php echo get_field('mail') ?>" class="directorio__item__sociales__link">
-                    <img src="<?php echo get_template_directory_uri().'/img/cir-1.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri().'/img/2022/correo.png' ?>" alt="">
                     </a>
                     <a href="<?php echo get_field('telefono') ?>" class="directorio__item__sociales__link">
-                    <img src="<?php echo get_template_directory_uri().'/img/cir-1.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri().'/img/2022/llamada.png' ?>" alt="">
                     </a>
                     <a href="<?php echo get_field('website') ?>" class="directorio__item__sociales__link">
-                    <img src="<?php echo get_template_directory_uri().'/img/cir-1.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri().'/img/2022/web.png' ?>" alt="">
                     </a>
                     <a href="<?php echo get_field('facebook') ?>" class="directorio__item__sociales__link">
-                    <img src="<?php echo get_template_directory_uri().'/img/cir-1.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri().'/img/2022/facebook.png' ?>" alt="">
                     </a>
                     <a href="<?php echo get_field('twitter') ?>" class="directorio__item__sociales__link">
-                    <img src="<?php echo get_template_directory_uri().'/img/cir-1.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri().'/img/2022/twiiter.png' ?>" alt="">
                     </a>
                 </div>
 

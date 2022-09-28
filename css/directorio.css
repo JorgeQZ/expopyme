@@ -18,7 +18,6 @@
 }
 
 .directorio__cont {
-  background-color: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,6 +31,7 @@
       flex-wrap: wrap;
 }
 .directorio__item {
+  padding: 10px;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 30%;
           flex: 1 0 30%;
@@ -95,12 +95,20 @@
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #e5202e;
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
+  margin: 10px;
+  margin-right: 8px;
+  margin-left: 0;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+.directorio__item__sociales__link:hover {
+  background-color: #870f25;
 }
 .directorio__item__sociales__link img {
   padding: 0;
   margin: 0;
-  width: 30px;
-  height: 30px;
+  width: 22px;
+  height: 22px;
 }
