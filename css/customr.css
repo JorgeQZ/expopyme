@@ -1,0 +1,105 @@
+/* RESPONSIVE SUPPORT MENU
+----------------------------------------------- */
+@media only screen and (max-width: 60em) {
+	.nav-open {
+		display: block;
+		text-align: center;
+		}
+	#main-navigation:target > .nav-open {
+		display: none;
+		}
+	#main-navigation:target > .nav-close {
+		display: block;
+		text-align: center;
+		}
+	#main-navigation > .sf-menu {
+		position: relative;
+		text-align: left;
+		}
+	#main-navigation > .sf-menu > ul {
+		/*position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		max-height: 0;
+		max-width: 16em;
+		overflow: hidden;
+		background: #333;*/
+		}
+	#main-navigation:target > .sf-menu > ul {
+		max-height: 400px;
+		}
+	#main-navigation > .sf-menu > ul > li {
+		float: none;
+		display: block;
+		/*border-bottom: 1px dotted #565656;*/
+		}
+	#main-navigation > .sf-menu > ul > li:after {
+		display: none;
+		}
+	#main-navigation li a {
+		float: none;
+		display: block;
+		color: #fff;
+		}
+	}
+
+/* RESPONSIVE SUPPORT
+----------------------------------------------- */
+
+/************************************** MEDIA *******************************/
+@media (max-width: 599px) {
+  .hidden-xs {
+    display: none !important;
+  }
+  .text-left{
+    text-align: center !important;
+	}
+  .text-right{
+    text-align: center !important;
+  }
+	#main-navigation li a {
+    padding: 12px 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 300;
+    text-decoration: none;
+	}
+
+	.btn-per-2, .btn-per-1, .btn-per-3{
+    display: block;
+		margin-top: 13px;
+	}
+	.exposicion-exagonos .abajo {
+    margin-top: 0px;
+}
+#formacion-empresarial .d-flex{
+	display: grid !important;
+}
+}
+
+@media (min-width: 600px) and (max-width: 991px) {
+  .hidden-sm {
+    display: none !important;
+  }
+  .text-left{
+   text-align: center !important;
+  }
+  .text-right{
+    text-align: center !important;
+  }
+
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hidden-md {
+    display: none !important;
+  }
+
+}
+@media (min-width: 1200px) {
+  .hidden-lg {
+    display: none !important;
+  }
+
+}

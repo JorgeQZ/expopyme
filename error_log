@@ -1,0 +1,9 @@
+[14-Aug-2019 12:59:33 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/expomty/public_html/wp-content/themes/expopyme/index.php on line 14
+[14-Aug-2019 12:59:34 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/expomty/public_html/wp-content/themes/expopyme/index.php on line 14
+[17-Nov-2019 21:06:43 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/expomty/public_html/wp-content/themes/expopyme/404.php on line 8
+[13-Dec-2019 03:21:51 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/expomty/public_html/wp-content/themes/expopyme/404.php on line 8
+[15-Dec-2019 03:44:06 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/expomty/public_html/wp-content/themes/expopyme/404.php on line 8
+[11-Jan-2020 16:58:33 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/expomty/public_html/wp-content/themes/expopyme/404.php on line 8
+[14-Jan-2020 16:27:27 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/expomty/public_html/wp-content/themes/expopyme/404.php on line 8
+[17-Apr-2020 03:06:23 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/expomty/public_html/wp-content/themes/expopyme/404.php on line 8
+[24-Apr-2020 22:21:44 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/expomty/public_html/wp-content/themes/expopyme/404.php on line 8
