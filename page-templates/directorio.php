@@ -27,7 +27,9 @@ get_header(); ?>
 
             ?>
             <div class="directorio__item">
-                <img src="<?php echo get_field('logo') ?>" alt="" class="directorio__item__logo">
+                <div class="directorio__item__logo_cont">
+                    <img src="<?php echo get_field('logo') ?>" alt="" class="directorio__item__logo">
+                </div>
 
                 <div class="directorio__item__title">
                     <?php the_title()?>
@@ -46,21 +48,51 @@ get_header(); ?>
                 </div>
 
                 <div class="directorio__item__sociales">
-                    <a href="<?php echo get_field('mail') ?>" class="directorio__item__sociales__link">
+
+                    <?php if(get_field('mail')): ?>
+                    <a href="mailto:<?php echo get_field('mail') ?>" class="directorio__item__sociales__link" target="_top">
                     <img src="<?php echo get_template_directory_uri().'/img/2022/correo.png' ?>" alt="">
                     </a>
-                    <a href="<?php echo get_field('telefono') ?>" class="directorio__item__sociales__link">
+                    <?php endif; ?>
+
+                    <?php if(get_field('telefono')): ?>
+                    <a href="tel:<?php echo get_field('telefono') ?>" class="directorio__item__sociales__link">
                     <img src="<?php echo get_template_directory_uri().'/img/2022/llamada.png' ?>" alt="">
                     </a>
-                    <a href="<?php echo get_field('website') ?>" class="directorio__item__sociales__link">
-                    <img src="<?php echo get_template_directory_uri().'/img/2022/web.png' ?>" alt="">
-                    </a>
-                    <a href="<?php echo get_field('facebook') ?>" class="directorio__item__sociales__link">
+                    <?php endif; ?>
+
+                    <?php if(get_field('website')):
+                        $url = '';
+                        if(strpos(get_field('website'),"http:") !== false ||
+                            strpos(get_field('website'),"https:") !== false){
+                            $url = get_field('website');
+                        }else{
+                            $url = '//'.get_field('website');
+                        }
+                        ?>
+                        <a href="<?php echo $url ?>" class="directorio__item__sociales__link" target="_blank" rel="nofollow">
+                        <img src="<?php echo get_template_directory_uri().'/img/2022/web.png' ?>" alt="">
+                        </a>
+                    <?php endif; ?>
+
+                    <?php
+                    if(get_field('facebook')):
+
+                        if(strpos(get_field('facebook'),"@")  !== false  ){
+                            echo '@';
+                            $fb = 'https://www.facebook.com/'.str_replace('@', '', get_field('facebook'));
+                        }
+                        ?>
+                    <a href="<?php echo $fb ?>" class="directorio__item__sociales__link">
                     <img src="<?php echo get_template_directory_uri().'/img/2022/facebook.png' ?>" alt="">
                     </a>
+                    <?php endif; ?>
+
+                    <?php if(get_field('twitter')): ?>
                     <a href="<?php echo get_field('twitter') ?>" class="directorio__item__sociales__link">
                     <img src="<?php echo get_template_directory_uri().'/img/2022/twiiter.png' ?>" alt="">
                     </a>
+                    <?php endif; ?>
                 </div>
 
             </div>
