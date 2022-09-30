@@ -26,7 +26,7 @@ get_header(); ?>
         while ( $loop->have_posts() ) : $loop->the_post();
 
             ?>
-            <div class="directorio__item">
+            <div class="directorio__item" data-aos="fade-up">
                 <div class="directorio__item__logo_cont">
                     <img src="<?php echo get_field('logo') ?>" alt="" class="directorio__item__logo">
                 </div>
