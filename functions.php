@@ -193,6 +193,12 @@ function expopyme_scripts() {
 	if(is_page_template("page-templates/directorio.php")){
 		wp_enqueue_style( 'directorio', get_template_directory_uri() . '/css/directorio.css' );
 	}
+
+
+	if(is_page_template("page-templates/lista-videos.php")){
+		echo 'hola';
+		wp_enqueue_style( 'lista-videos', get_template_directory_uri() . '/css/lista-videos.css' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'expopyme_scripts' );
 

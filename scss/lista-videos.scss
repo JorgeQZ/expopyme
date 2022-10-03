@@ -1,0 +1,79 @@
+.banner_hero{
+    background-color: red;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 600px;
+    background-image: url(../img/directorio_banner.jpg);
+    background-size: cover;
+    background-position: center;
+    h1{
+        font-weight: bold !important;
+        font-size: 6em !important;
+    }
+}
+
+.filter{
+    &__cont{
+        margin: 0 auto;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+    }
+
+    &__button-eje{
+        padding: 10px 6px;
+        border-radius: 8px;
+        border: 1px solid #e5202e;
+        width: 100px;
+        text-align: center;
+        color: #e5202e;
+        cursor: pointer;
+        transition: all 300ms;
+        flex: 1 0 12%;
+        margin: 15px 5px ;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        line-height: 1;
+        min-width: 120px;
+        &-main{
+            width: 100%;
+            max-width: 350px;
+        }
+
+        &:hover,  &.active{
+            background-color: #e5202e;
+            color: white;
+        }
+        &.active{
+            font-weight: bold;
+        }
+    }
+}
+
+.videos_cont{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .item{
+        width: 48%;
+
+        .expo-video{
+            width: 100%;
+        }
+        .title{
+            font-weight: bolder;
+            font-size: 18px;
+            text-align: center;
+            line-height: 1.2;
+            color:  #e5202e;
+        }
+    }
+}
