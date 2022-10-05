@@ -34,6 +34,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  max-width: 1024px;
 }
 .filter__button-eje {
   padding: 10px 6px;
@@ -59,8 +60,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 12px;
-  line-height: 1;
+  font-size: 10px;
+  line-height: 1.2;
   min-width: 120px;
 }
 .filter__button-eje-main {
@@ -79,17 +80,97 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 .videos_cont .item {
-  width: 48%;
+  min-width: 320px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 48%;
+          flex: 1 0 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
 }
 .videos_cont .item .expo-video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  position: relative;
   width: 100%;
+  height: 400px;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 5px;
+}
+.videos_cont .item .expo-video .play {
+  height: 72px;
+  width: 72px;
+  left: 50%;
+  top: 50%;
+  margin-left: -36px;
+  margin-top: -36px;
+  position: absolute;
+  background: url("//i.imgur.com/TxzC70f.png") no-repeat;
+  cursor: pointer;
+}
+.videos_cont .item .expo-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: transparent;
+}
+.videos_cont .item .expo-video img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  height: auto;
+  cursor: pointer;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+.videos_cont .item .expo-video img:hover {
+  -webkit-filter: brightness(75%);
+          filter: brightness(75%);
 }
 .videos_cont .item .title {
   font-weight: bolder;
@@ -97,4 +178,6 @@
   text-align: center;
   line-height: 1.2;
   color: #e5202e;
+  height: 55px;
+  padding: 0 20px;
 }

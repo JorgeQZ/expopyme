@@ -7,7 +7,7 @@ get_header();
 ?>
  <div class="banner_hero">
     <div class="container py-7 w-100">
-        <h1 class="t-blanco mayusculas" data-aos="fade-up">EXPO PYME 2022</h1>
+        <h1 class="t-blanco mayusculas" data-aos="fade-up">CONFERENCIAS</h1>
     </div>
  </div>
 

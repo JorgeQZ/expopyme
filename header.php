@@ -86,7 +86,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 	<!-- Facebook Pixel Code -->
-	<script>
+	<!-- <script>
 	!function(f,b,e,v,n,t,s)
 	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -102,10 +102,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	 <img height="1" width="1"
 	src="https://www.facebook.com/tr?id=547225706282521&ev=PageView
 	&noscript=1"/>
-	</noscript>
+	</noscript> -->
 	<!-- End Facebook Pixel Code -->
 
-        <script>
+        <!-- <script>
          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -114,15 +114,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          ga('create', 'UA-99680481-1', 'auto');
          ga('send', 'pageview');
 				 gtag('config', 'AW-851605077');
-        </script>
+        </script> -->
 
 </head>
 
 <body <?php body_class(); ?>>
 
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59XDJLZ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!--noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59XDJLZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></!--noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 	<header>

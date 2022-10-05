@@ -21,6 +21,7 @@
         justify-content: center;
         flex-wrap: wrap;
         flex-direction: row;
+        max-width: 1024px;
 
     }
 
@@ -39,8 +40,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 12px;
-        line-height: 1;
+        font-size: 10px;
+        line-height: 1.2;
         min-width: 120px;
         &-main{
             width: 100%;
@@ -59,14 +60,76 @@
 
 .videos_cont{
     display: flex;
+    align-items: stretch;
     justify-content: center;
     flex-wrap: wrap;
+    flex-direction: row;
 
     .item{
-        width: 48%;
+        min-width: 320px;
+        flex: 1 0 48%;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
 
-        .expo-video{
+        .expo-video {
+            display: flex;
+            align-items: center;
+            justify-content: stretch;
+            position: relative;
             width: 100%;
+            height: 400px;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 5px;
+
+            .play {
+                height: 72px;
+                width: 72px;
+                left: 50%;
+                top: 50%;
+                margin-left: -36px;
+                margin-top: -36px;
+                position: absolute;
+                background: url('//i.imgur.com/TxzC70f.png') no-repeat;
+                cursor: pointer;
+              }
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 100;
+                background: transparent;
+            }
+
+            img {
+                object-fit: cover;
+                display: block;
+                left: 0;
+                bottom: 0;
+                margin: auto;
+                max-width: 100%;
+                width: 100%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                border: none;
+                height: auto;
+                cursor: pointer;
+                -webkit-transition: 0.4s all;
+                -moz-transition: 0.4s all;
+                transition: 0.4s all;
+
+                &:hover {
+                    filter: brightness(75%);
+                }
+            }
+
         }
         .title{
             font-weight: bolder;
@@ -74,6 +137,8 @@
             text-align: center;
             line-height: 1.2;
             color:  #e5202e;
+            height: 55px;
+            padding: 0 20px ;
         }
     }
 }

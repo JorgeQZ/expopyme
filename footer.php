@@ -23,7 +23,7 @@
 
 
 
-<div class="bg-guindo py-7" id="footer-top" data-aos="fade-up">
+<div class="bg-guindo py-7" id="footer-top">
 		<div class="container">
 
 			<div class="row">
