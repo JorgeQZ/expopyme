@@ -1,10 +1,23 @@
 $ = jQuery;
+
+function addSticky() {
+
+    var header = document.getElementById("menu-ejes");
+    var sticky = header.offsetTop;
+    if (window.pageYOffset > 203) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+}
+window.onscroll = function () { addSticky(); }
+
 $(document).ready(function () {
 
     $('#select-ejes').on("input", function () {
         let eje = $(this).val();
         $('.lista-videos_cont tbody tr').hide();
-        $(".lista-videos_cont tbody tr[data-eje='" + eje + "']").show();
+        $(".lista-videos_cont tbody tr[data-eje='" + eje + "']").fadeIn();
     });
 
     $('#search-conf').on("input", function () {
@@ -22,6 +35,13 @@ $(document).ready(function () {
                 rows[i].style.display = "none";
             }
         }
+    });
+
+    $('.tab-button').on('click', function (e) {
+        let target = $(this).data('button');
+
+        $('.tab').removeClass('active').hide();
+        $('.tab[data-tab="' + target + '"]').fadeIn('slow');
     });
 
 });

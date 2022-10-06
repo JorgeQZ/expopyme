@@ -28,7 +28,7 @@ get_header();
     <div class="filter__button-eje" data-filter="VENTAS">VENTAS</div>
 </div>
 
-<div class="videos_cont">
+<div class="videos_cont container">
 <?php
 $args = array(
     'post_type' => 'video',

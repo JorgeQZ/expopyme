@@ -6,12 +6,14 @@
  get_header();
 ?>
 
-<div class="menu-ejes">
-    <ul>
-        <li><a href="#">Ejes</a></li>
-        <li><a href="#">Expositores magistrales</a></li>
-        <li><a href="#">Lista de conferencias</a></li>
-    </ul>
+<div class="menu-ejes-cont">
+    <div class="menu-ejes" id="menu-ejes">
+        <ul>
+            <li><a class="scroll-button" href="#ejes">Ejes</a></li>
+            <li><a class="scroll-button" href="#expositores-magistrales">Expositores magistrales</a></li>
+            <li><a class="scroll-button" href="#lista-de-conferencias">Lista de conferencias</a></li>
+        </ul>
+    </div>
 </div>
 
 <div class="banner_hero">
@@ -20,7 +22,7 @@
     </div>
  </div>
 
- <div class="grid-cont">
+ <div class="grid-cont" id="ejes">
     <div class="column">
         <img src="<?php echo get_template_directory_uri().'/img/2022/first_square.jpg' ?>" alt="">
     </div>
@@ -80,11 +82,6 @@
             </a>
         </div>
     </div>
- </div>
-
-
-
- <div class="grid-cont-two_">
     <div class="column">
         <div class="title">Recursos Humano <br>y desarrollo <br>organizacional
         <br>
@@ -103,20 +100,20 @@
     </div>
  </div>
 
- <div class="menu-tabs">
+ <div class="menu-tabs" id="expositores-magistrales">
     <div class="menu_title">
         conferencias destacadas
 
     </div>
     <ul>
-        <li><a href="#">miércoles 17</a></li>
-        <li><a href="#">jueves 18</a></li>
-        <li><a href="#">viernes 19</a></li>
+        <li data-button="miercoles" class="tab-button">miércoles 17</li>
+        <li data-button="jueves" class="tab-button">jueves 18</li>
+        <li data-button="viernes" class="tab-button">viernes 19</li>
     </ul>
 </div>
 
 <div class="tabs-content">
-    <div class="tab active">
+    <div data-tab="miercoles" class="tab active">
         <div class="title">
         <span>MIÉRCOLES 17 DE AGOSTO</span> <br>
         -<br>
@@ -263,17 +260,298 @@
             </div>
         </div>
     </div>
-    <div class="tab"></div>
-    <div class="tab"></div>
+    <div data-tab="jueves" class="tab">
+        <div class="title">
+        <span>JUEVES 18 DE AGOSTO</span> <br>
+        -<br>
+        INAUGURACIÓN - 10:30 HORAS
+        </div>
+
+        <div class="container grid-users">
+            <div class="columns">
+
+
+                <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+            <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-tab="viernes" class="tab">
+        <div class="title">
+        <span>VIERNES 19 DE AGOSTO</span> <br>
+        -<br>
+        INAUGURACIÓN - 10:30 HORAS
+        </div>
+
+        <div class="container grid-users">
+            <div class="columns">
+                <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+            <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                    <div class="desc">
+                        <div class="second">Conferencia inaugural:</div>
+                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <br>
+                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">09:30 A 10:30 HRS</div>
+                        <div class="primary">MARCUS DANTUS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-
-
-<div class="table-cont">
+<div class="table-cont" id="lista-de-conferencias">
     <div class="filters_cont">
         <div class="search-cont">
-            <p>&nbsp</p>
             <input id="search-conf" type="text" placeholder="Buscar conferencia">
+            <div class="icon">
+                <img src="<?php echo get_template_directory_uri( ).'/img/2022/magnifying-glass.png' ?>" alt="">
+            </div>
         </div>
         <div class="dropdown-cont">
             <p>Filtrar por ejes:</p>

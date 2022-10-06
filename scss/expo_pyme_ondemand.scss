@@ -1,28 +1,41 @@
-.menu-ejes{
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    ul{
+body, html{
+    scroll-behavior: smooth;
+}
+.menu-ejes-cont{
+    position: relative;
+    height: 65px;
+    .menu-ejes{
+        background-color: #fff;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        li{
-            padding: 20px 10px;
-            transition: all 300ms;
-            a{
-                color: #e5202e;
+        &.sticky{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li{
+                padding: 20px 10px;
                 transition: all 300ms;
-
-            }
-
-            &:hover{
-                background-color: #e5202e;
                 a{
-                    color: white;
+                    color: #e5202e;
+                    transition: all 300ms;
+
+                }
+
+                &:hover{
+                    background-color: #e5202e;
+                    a{
+                        color: white;
+                    }
                 }
             }
         }
@@ -112,6 +125,7 @@
     display: flex;
     align-items: stretch;
     justify-content: center;
+    flex-wrap: wrap;
     .column{
         height: 400px;
         width: 50%;
@@ -121,6 +135,7 @@
         text-align: center;
         background-size: cover;
         background-position: center;
+        flex: 1 0 50%;
         &:nth-child(1){
             background-image: url(../img//2022/fifth-square.jpg);
         }
@@ -128,44 +143,12 @@
             background-image: url(../img//2022/sixth-square.jpg);
         }
 
-        .title{
-            width: 100%;
-            text-align: center;
-            margin-left: 40px;
-            font-weight: bold;
-            color: #fff;
-            font-size: 24px;
-            line-height: 1;
-        }
-        .link{
-            img{
-                margin-top: 10px;
-                width: 40px;
-            }
-        }
-    }
-}
-
-.grid-cont-two_{
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    .column{
-        height: 400px;
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        text-align: center;
-        background-size: cover;
-        background-position: center;
-        &:nth-child(1){
+        &:nth-child(3){
             background-image: url(../img//2022/seventh-square.jpg);
         }
-        &:nth-child(2){
+        &:nth-child(4){
             background-image: url(../img//2022/eigth-square.jpg);
         }
-
         .title{
             width: 100%;
             text-align: center;
@@ -207,19 +190,17 @@
             line-height: 1;
             padding: 15px 10px;
             transition: all 300ms;
-            a{
-                text-transform: uppercase;
-                color: #e5202e;
-                color: #fff;
-                transition: all 300ms;
-
-            }
+            text-transform: uppercase;
+            color: #e5202e;
+            color: #fff;
+            transition: all 300ms;
+            cursor: pointer;
 
             &:hover{
                 background-color: #e5202e;
-                a{
+
                     color: white;
-                }
+
             }
         }
     }
@@ -228,6 +209,7 @@
 .tabs-content{
     .tab{
         padding: 40px ;
+        display: none;
         &.active{
             display: block;
         }
@@ -249,20 +231,16 @@
             margin-top: 40px;
             .columns{
                 width: 50%;
-                background-color: red;
                 display: flex;
                 align-items: center;
                 justify-content: start;
                 flex-wrap: wrap;
                 flex-direction: column;
-                &:nth-child(2){
-                    background-color: blue;
-                }
                 .item{
+                    margin: 20px 0;
                     display: flex;
                     align-items: start;
                     justify-content: center;
-                    background-color: beige;
                     .desc{
                         padding: 20px;
                         padding-top: 50px;
@@ -332,6 +310,24 @@
                     word-wrap: break-word;
                 }
             }
+            .icon{
+                float: left;
+                background-color: #e5202e;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 20px;
+                }
+            }
+        }
+        .search-cont{
+            padding-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
     .lista-videos_cont{
