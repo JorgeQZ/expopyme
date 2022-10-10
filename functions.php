@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 /**
  * expopyme functions and definitions
  *
@@ -203,6 +204,10 @@ function expopyme_scripts() {
 	if(is_page_template("page-templates/expo-pyme-on-demand.php")){
 		wp_enqueue_style( 'expo_pyme_ondemand', get_template_directory_uri() . '/css/expo_pyme_ondemand.css' );
 		wp_enqueue_script( 'ondemand', get_template_directory_uri() . '/js/ondemand.js', array( 'jquery' ) );
+		wp_localize_script('ondemand', 'ajax_query_vars', array(
+			'ajax_url' => admin_url('admin-ajax.php'),
+			'nonce'  => wp_create_nonce('wp_rest')
+		));
 	}
 }
 add_action( 'wp_enqueue_scripts', 'expopyme_scripts' );
@@ -596,3 +601,40 @@ function my_wpcf7_form_elements($html) {
 add_filter('wpcf7_form_elements', 'my_wpcf7_form_elements');
 
 /* Fin de Comentarios Desactivados */
+
+
+/**
+ * Funciones AJAX guardado de views
+ */
+
+
+add_action('wp_ajax_nopriv_recordView', 'recordView');
+add_action('wp_ajax_recordView', 'recordView');
+
+function recordView(){
+	global $wpdb;
+	date_default_timezone_set('America/Monterrey');
+
+	$currentVideoID = $_POST['currentVideoID'];
+	$currentUserID = get_current_user_id();
+	$currentDate = date("Y-m-d H:i:s");
+	// $data = array(
+	// 	'currentVideoID' => $currentVideoID,
+	// 	'currentUserID' => $currentUserID,
+	// 	'currentDate' => $currentDate
+	// );
+
+    echo json_encode(
+		$wpdb->insert(
+			'wp_expovideos',
+			array(
+				'user_id' => $currentUserID,
+				'video_id' => $currentVideoID,
+				'date' => $currentDate
+			)
+		)
+	);
+
+    exit;
+}
+

@@ -5,7 +5,13 @@
 
  get_header();
 ?>
+<div class="modal-video-cont" id="modal-video-cont">
+    <div class="close-button">+</div>
 
+    <div class="modal-title" id="modal-title"></div>
+    <div class="modal-video" id="modal-video"></div>
+    <div id="display"></div>
+</div>
 <div class="menu-ejes-cont">
     <div class="menu-ejes" id="menu-ejes">
         <ul>
@@ -590,7 +596,7 @@
                     $ytID = str_replace('https://youtu.be/', '', get_field('yt_video') );
                     ?>
                     <tr data-eje="<?php echo get_field('eje')?>">
-                        <td class="titulo"><div class="title_text"><a href="#"><strong><?php the_title(); ?></strong></a></div></td>
+                        <td class="titulo"><div class="title_text"><a  data-video-id="<?php echo get_the_ID(); ?>" data-yt-id ="<?php echo $ytID; ?>"class="expo-video-item"><strong><?php the_title(); ?></strong></a></div></td>
                         <td class="conferencista"><?php echo get_field('conferencista'); ?></td>
                         <td class="eje"><?php echo get_field('eje')?></td>
                     </tr>
