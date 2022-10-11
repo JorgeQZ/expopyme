@@ -52,12 +52,21 @@
             background-color: #e5202e;
             color: white;
         }
-        &.active{
-            font-weight: bold;
-        }
     }
 }
 
+.video-titulo{
+    text-align: center;
+    font-size: 24px;
+display: none;
+    text-transform: uppercase;
+    background-color: #e5202e;
+    color: white;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px 20px;
+    margin-top: 30px;
+}
 .videos_cont{
     display: flex;
     align-items: stretch;

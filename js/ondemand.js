@@ -51,7 +51,8 @@ $(document).ready(function () {
      */
     $('.tab-button').on('click', function (e) {
         let target = $(this).data('button');
-
+        $('.tab-button').removeClass('active');
+        $(this).addClass('active');
         $('.tab').removeClass('active').hide();
         $('.tab[data-tab="' + target + '"]').fadeIn('slow');
     });

@@ -377,7 +377,7 @@ body, html {
   transition: all 300ms;
   cursor: pointer;
 }
-.menu-tabs ul li:hover {
+.menu-tabs ul li:hover, .menu-tabs ul li.active {
   background-color: #e5202e;
   color: white;
 }
@@ -409,38 +409,43 @@ body, html {
   margin-top: 40px;
 }
 .tabs-content .tab .grid-users .columns {
-  width: 50%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.tabs-content .tab .grid-users .columns .item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 48%;
+          flex: 1 0 48%;
+  margin: 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.tabs-content .tab .grid-users .columns .item {
-  margin: 20px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
+.tabs-content .tab .grid-users .columns .item img {
+  max-width: 200px;
+}
 .tabs-content .tab .grid-users .columns .item .desc {
   padding: 20px;
-  padding-top: 50px;
   max-width: 200px;
 }
 .tabs-content .tab .grid-users .columns .item .desc .second {

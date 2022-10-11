@@ -112,7 +112,7 @@
 
     </div>
     <ul>
-        <li data-button="miercoles" class="tab-button">miércoles 17</li>
+        <li data-button="miercoles" class="tab-button active">miércoles 17</li>
         <li data-button="jueves" class="tab-button">jueves 18</li>
         <li data-button="viernes" class="tab-button">viernes 19</li>
     </ul>
@@ -129,138 +129,94 @@
         <div class="container grid-users">
             <div class="columns">
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Tatiana Clouthier.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Conferencia magistral:</div>
+                        <div class="primary">Las MiPymes como eje central de la economía</div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second">DOCUSIGN</div>
+                        <div class="second">14:30 A 15:30 HRS</div>
+                        <div class="primary">Tatiana Clouthier<br><small>Secretaría de Economía</small></div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Conferencia magistral:</div>
+                        <div class="primary">AMAZON</div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second">AUTYCOM</div>
+                        <div class="second">14:30 A 15:30 HRS</div>
+                        <div class="primary">AMAZON</div>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Kharla Aguilar.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Conferencia magistral:</div>
+                        <div class="primary">Agua residual tratada</div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second"> DOCUSIGN</div>
+                        <div class="second">15:45 A 16:45 HRS</div>
+                        <div class="primary">Kharla Jovanka Aguilar Limón<br><small>Cordinadora de saneamiento<br>Servicios de agua y Drenajes de Monterrey</small></div>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/José Pinto.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Conferencia magistral:</div>
+                        <div class="primary">Retos en la industria de aplicaciones tecnológicas</div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second">AUTYCOM</div>
+                        <div class="second">15:45 A 16:45 HRS</div>
+                        <div class="primary">
+                            José Pinto<br>
+                            <small>
+                                Gerente General,<br>
+                                Uber México
+                            </small>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Luis Antonio Ramirez.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Conferencia magistral:</div>
+                        <div class="primary">DOCUSIGN</div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second"> DOCUSIGN</div>
+                        <div class="second">17:00 A 18:00 HRS</div>
+                        <div class="primary">
+                            Luis Antonio Ramírez,<br>
+                            <small>
+                                Director General, <br>
+                                NAFIN - BANCOMEXT
+                            </small>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Rafel Niell.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Conferencia magistral:</div>
+                        <div class="primary">AUTYCOM</div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
-                    </div>
-                </div>
-            </div>
-            <div class="columns">
-            <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
-
-                    <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
-                        <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
-
-                    <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
-                        <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
-
-                    <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
-                        <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
-
-                    <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
-                        <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
-
-                    <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
-                        <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second">AUTYCOM</div>
+                        <div class="second">17:00 A 10:30 HRS</div>
+                        <div class="primary">
+                            Rafael Niell, <br>
+                            <small>
+                                Fundador y COO,<br>
+                                MINU
+                            </small>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -275,128 +231,184 @@
 
         <div class="container grid-users">
             <div class="columns">
-
-
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Paneles ONDEMAND/Lissy-Pedro-Ricardo-Jorge.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Panel:</div>
+                        <div class="primary">Industrial Tech: El rumbo de la tecnología en el sector industrial</div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second">DOCUSIGN</div>
+                        <div class="second">10:30 A 11:30 HRS</div>
+                        <div class="primary">
+                            Lissy Giacomán, <small>CEO, Vinco</small><br>
+                            Ricardo Cevada, <small>CEO, Skills For Industry</small><br>
+                            Pedro Vallejo, <small>Fundador y Director General, Datlas</small><br>
+                            Moderador: Jorge Cervantes, <small>Presidente de la Comisión de Jóvenes</small><br>
+                        </div>
                     </div>
                 </div>
+
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Alfonso de los Ríos.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Conferencia magistral:</div>
+                        <div class="primary">De startup a unicornio en menos de 4 años</div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
+                        <div class="second">AUTYCOM</div>
                         <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="primary">
+                            Alfonso de los Ríos, <br>
+                            <small>
+                                CEO y Co-fundador, Nowsports
+                            </small>
+
+                        </div>
                     </div>
                 </div>
+
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Jorge Valencia.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Conferencia magistral:</div>
+                        <div class="primary">Firmas electrónicas: El último reto de la transformación digital</div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second"> DOCUSIGN</div>
+                        <div class="second">11:45 A 12:45 HRS</div>
+                        <div class="primary">Jorge Valencia, <br><small>Account Executve, DocuSign</small></div>
                     </div>
                 </div>
+
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Ricardo Rentería.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Conferencia magistral:</div>
+                        <div class="primary">¿Cómo la nube de Amazon Web Services (AWS) se puede convertir en tu mejor aliado de nogocio?</div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second">AUTYCOM</div>
+                        <div class="second">11:45 A 12:45 HRS</div>
+                        <div class="primary">Ricardo Rentería, <br>
+                            <small>Director Comercial, <br> Amazon Web Services</small>
+                        </div>
                     </div>
                 </div>
+
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Paneles ONDEMAND/Gladys-Martha-Mercedes.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Panel: </div>
+                        <div class="primary">
+                            La tendencia actual en supply chain. Cómo lograr ser proveedor de empresas multinacionales.
+                        </div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second">DOCUSIGN</div>
+                        <div class="second">14:30 A 15:30 HRS</div>
+                        <div class="primary">
+                            Gladis Araujo, <br>
+                            <small>VP Global de Calidad, MATTEL</small><br>
+                            Lucía Mortera, <br>
+                            <small>
+                                Fundadora, Rautaki
+                            </small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="columns">
-            <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+
+                <div class="item">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Paneles ONDEMAND/Cesar-Esteban-Leopoldo.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Panel: </div>
+                        <div class="primary">
+                            Líderes empresarios del noreste
+                        </div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second">AUTYCOM</div>
+                        <div class="second">14:30 A 15:30 HRS</div>
+                        <div class="primary">
+                        César Jiménez, <br><small>Presidente Ejectuvo, TERNIUM</small><br>
+                        Leopoldo Cedillo, <br><small>CEO, PROEZA</small>
+                        Esteban Rivero Gonález, <br><small>Director Gral Adjunto, AUTLÁN</small>
+                        </div>
                     </div>
                 </div>
+
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Leo Piccioli.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Conferencia magistral: </div>
+                        <div class="primary">
+                           El fututo es de los vagos
+                        </div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second">DOCUSIGN</div>
+                        <div class="second">15:45 A 16:45 HRS</div>
+                        <div class="primary">
+                            Leo Piccioli, <br><small>LinkedIn Top Voice</small><br>
+                        </div>
                     </div>
                 </div>
+
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Paneles ONDEMAND/Gladys-Martha-Mercedes.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Panel: </div>
+                        <div class="primary">
+                            Hablidades del futuro y cómo liderarlo
+                        </div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second">AUTYCOM</div>
+                        <div class="second">15:45 A 16:45 HRS</div>
+                        <div class="primary">
+                        Gladis Araujo, <br><small>VP Global de Calidad, MATTEL</small><br>
+                        Martha Barroso, <br><small>Directora de People & Culture, Manpower</small>
+                        Mercdes de la Maza, <br><small>CEO, Generation México</small>
+                        </div>
                     </div>
                 </div>
+
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Paneles ONDEMAND/Carlos-Ivan-Juan Antonio.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Panel: </div>
+                        <div class="primary">
+                            Integración de las PyMES en las cadenas de valor
+                        </div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second">DOCUSIGN</div>
+                        <div class="second">17:00 A 18:00 HRS</div>
+                        <div class="primary">
+                        Carlos Rodríguez, <br><small>Procurement Regional Director, Exiros</small><br>
+                        Juan Antonio Espinosa, <br><small>Director de Abastecimientos, CEMEX</small><br>
+                        Iván Martínez, <br><small>Subdirector de Negociación, DEACERO</small>
+                        </div>
                     </div>
                 </div>
+
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Conferencia magistral: </div>
+                        <div class="primary">
+                            La transformación digital al alcance de todos
+                        </div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second">AUTYCOM</div>
+                        <div class="second">17:00 A 18:00 HRS</div>
+                        <div class="primary">
+                            Gerardo Pérez Lechuga, <br>
+                            <small>
+                                Head of Cloud Application Solutions, SIEMENS
+                            </small>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -412,138 +424,180 @@
         <div class="container grid-users">
             <div class="columns">
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Paneles ONDEMAND/Everardo-Joana-Manuel.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Panel:</div>
+                        <div class="primary">Perspectivas económicas para las PyMES 2023</div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second"> DOCUSIGN</div>
+                        <div class="second">10:30 A 11:30 HRS</div>
+                        <div class="primary">
+                            Everardo Elizono y Manuel Sánchez, <br>
+                            <small>
+                                Banco de México, Ex Gobernadores
+                            </small>
+                            Moderadora: Joana Chapa Directora,<br>
+                            <small>
+                                Centro de investigaciones económicas de la UANL
+                            </small>
+                        </div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Pedro Eloy.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Conferencia magistral:</div>
+                        <div class="primary">Los elementos del éxito en los negocios</div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second">AUTYCOM</div>
+                        <div class="second">10:30 A 11:30 HRS</div>
+                        <div class="primary">
+                            Pedro Eloy Ramirez, <br>
+                            <small>
+                                Fundador, Grupo Percepciones
+                            </small>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Ivan Rivas.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Conferencia magistral:</div>
+                        <div class="primary">Firmas electrónicas: el último reto de la transformación digital</div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second">DOCUSIGN</div>
+                        <div class="second">11:45 A 12:45 HRS</div>
+                        <div class="primary">
+                            Iván Rivas, <br>
+                            <small>
+                                Secretario, Decretaría de Economía de Nuevo León
+                            </small>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Alvaro Villar.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Conferencia magistral:</div>
+                        <div class="primary">¿Por qué elevar la apuesta por un modelo híbrido?</div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second">AUTYCOM</div>
+                        <div class="second">11:45 a 12:45 HRS</div>
+                        <div class="primary">
+                            Álvaro Villar, <br>
+                            <small>
+                                General Manager, WeWork
+                            </small>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Javier Jara.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Conferencia magistral:</div>
+                        <div class="primary">DOCUSIGN</div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second"> DOCUSIGN</div>
+                        <div class="second">14:30 A 15:30 HRS</div>
+                        <div class="primary">
+                            Javier Jara, <br>
+                            <small>
+                                Coordinador de incubadoras, Instituto de Innovación y Transferencia de Tecnología de Nuevo León
+                            </small>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Andres Diaz.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Conferencia magistral:</div>
+                        <div class="primary">Oportunidades en la tencnología para la internacionalización de las PyMES mexicanas</div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second">AUTYCOM</div>
+                        <div class="second">14:30 A 15:30 HRS</div>
+                        <div class="primary">
+                            Andrés Díaz Bedolla, <br>
+                            <small>
+                                CEO y representantes en México, Atomic88 y Alibaba
+                            </small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="columns">
-            <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
 
-                    <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
-                        <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
-                    </div>
-                </div>
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Carlos Ranero.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Conferencia magistral:</div>
+                        <div class="primary">De gerente comercial a gerente de growth</div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second">DOCUSIGN</div>
+                        <div class="second">15:45 A 16:45 HRS</div>
+                        <div class="primary">
+                           Carlos Ranero, <br>
+                           <small>
+                            Chief Growth Officer,
+                            Justo
+                           </small>
+                        </div>
                     </div>
                 </div>
+
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Alberto Achar.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Conferencia magistral:</div>
+                        <div class="primary">Cautiva a tu cliente con un gran mensaje</div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second">AUTYCOM</div>
+                        <div class="second">15:45 A 16:45 HRS</div>
+                        <div class="primary">
+                           Alberto Achar, <br>
+                           <small>
+                            Director Comercial, Librerías Gandhi
+                           </small>
+                        </div>
                     </div>
                 </div>
+
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Omar Carrera.png' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Conferencia magistral:</div>
+                        <div class="primary"></div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second">DOCUSIGN</div>
+                        <div class="second">17:00 A 18:00 HRS</div>
+                        <div class="primary">
+                          Omar Carrera, <br>
+                           <small>
+                            Director Comercial, Volaris
+                           </small>
+                        </div>
                     </div>
                 </div>
+
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/user.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/' ?>" alt="">
 
                     <div class="desc">
-                        <div class="second">Conferencia inaugural:</div>
-                        <div class="primary">Las claves para hacer crecer tu empresa</div>
+                        <div class="second">Conferencia magistral:</div>
+                        <div class="primary"></div>
                         <br>
-                        <div class="second"> DOCUSIGN Y AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
-                        <div class="primary">MARCUS DANTUS</div>
+                        <div class="second">AUTYCOM</div>
+                        <div class="second">17:00 A 18:00 HRS</div>
+                        <div class="primary">
+                            Microsoft
+                        </div>
                     </div>
                 </div>
             </div>
