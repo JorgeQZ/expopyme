@@ -128,29 +128,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></!--noscri
 	<header>
 	  <nav class=" header-principal">
 	     <div class="container d-flex align-items-center">
-	        <div class="text-left">
+	        <div class="text-left col-3">
 	           <a href="/" class="t-blanco"><img src="https://expopymemonterrey.com.mx/wp-content/uploads/2022/05/logo.png" class="logo" alt=""></a>
-	        </div>
-
-	        <div class="ml-auto d-flex align-items-center">
-						<img src="https://expopymemonterrey.com.mx/wp-content/uploads/2019/05/sombrabanner.png" alt="" class="hidden-xs">
-						<div class="text-center px-3 hidden-xs d-flex align-items-center px-4">
-							<p class="mb-0 mt-2 mayusculas pr-5 t-guindo fw-700">Entrada gratuita</p>
-							<a href="https://preregistrate.mx/2022/expopyme/" onclick="gtag('event', 'clic', {'event_category': 'registroheader', 'event_label': 'registro-header', 'value': '1'});" target="_blank" id="home-reg-header" class="btn-per-4 fw-700 mayusculas ">REGISTRO</a><br>
-						</div>
-						<img src="https://expopymemonterrey.com.mx/wp-content/uploads/2019/05/sombrabanner.png" alt="" class="hidden-xs pl-3">
-						<div class="px-3 hidden-xs">
-							<span class="t-guindo fs-15 text-left mayusculas"><strong>17 al 19 de agosto</strong><br>9:00 a 19:00 HORAS<br>SALAS A 1 Y A2, CINTERMEX</span>
-						</div>
 
 	        </div>
 
+			<div class="px-3 text-center container col-6">
+
+				<span class="text-cente r  t-guindo fs-15 text-left mayusculas">
+						<strong>PATROCINADORES ALIADOS</strong>
+				</span>
+				<div class="logos-cont align-items-center">
+					<img class="logo-pat" src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Protexa-02 copia.png' ?>" alt="">
+					<img class="logo-pat" src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/autycom.png' ?>" alt="">
+
+					<img class="logo-pat" src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Cemex-02 copia.png' ?>" alt="">
+				</div>
+			</div>
+
+	        <div class="ml-auto d-flex align-items-center col-3">
+				<div class="text-center px-3 d-flex align-items-center px-4">
+					<a href="<?php echo get_home_url().'/login' ?>"  id="home-reg-header" class="btn-per-4 fw-700 mayusculas ">Inicia Sesión</a><br>
+				</div>
+
+	        </div>
 	     </div>
-			 <div class="menu-cont text-center bg-guindo">
-	 			<nav id="main-navigation" class="main-navigation" role="navigation">
-	 				<?php wp_nav_menu( array( 'container_class' => 'clearfix sf-menu', 'theme_location' => 'main' ) ); ?>
-	 			</nav>
-	 		</div>
+
+		<div class="menu-cont text-center bg-guindo">
+			<nav id="main-navigation" class="main-navigation" role="navigation">
+				<?php wp_nav_menu( array( 'container_class' => 'clearfix sf-menu', 'theme_location' => 'main' ) ); ?>
+			</nav>
+		</div>
+
 	  </nav>
 	</header>
 

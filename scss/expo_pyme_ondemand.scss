@@ -2,6 +2,18 @@ body, html{
     scroll-behavior: smooth;
 }
 
+.logos-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    img.logo-pat{
+        width: auto;
+        max-width: 100px;
+        display: block;
+    }
+}
+
 .modal-video-cont{
     position: fixed;
     top: 0;
@@ -479,6 +491,39 @@ body, html{
                         background-size: cover;
                     }
                 }
+            }
+        }
+    }
+}
+
+.pat-cont{
+    padding: 40px;
+    .title{
+        text-transform: uppercase;
+        width: 100%;
+        margin: 0 auto;
+        color: #e5202e;
+        font-weight: bold;
+
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .grid-pat{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .item-cont{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 13%;
+
+            img{
+                margin: 10px;
+                max-height: 80px;
             }
         }
     }

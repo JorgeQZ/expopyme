@@ -13,7 +13,7 @@
     <div id="display"></div>
 </div>
 <div class="menu-ejes-cont">
-    <div class="menu-ejes" id="menu-ejes">
+    <div class="menu-ejes" id="menu-ejes" data-aos="fade-up">
         <ul>
             <li><a class="scroll-button" href="#ejes">Ejes</a></li>
             <li><a class="scroll-button" href="#expositores-magistrales">Expositores magistrales</a></li>
@@ -29,13 +29,13 @@
  </div>
 
  <div class="grid-cont" id="ejes">
-    <div class="column">
+    <div class="column" data-aos="fade-up">
         <img src="<?php echo get_template_directory_uri().'/img/2022/first_square.jpg' ?>" alt="">
     </div>
-    <div class="column">
+    <div class="column" data-aos="fade-up">
         <div class="title">Conferencias <br>y Paneles Magistrales
         <br>
-            <a href="#" class="link">
+            <a href="<?php echo get_home_url(); ?>/lista-de-videos/?eje=CONFERENCIAS Y PANELES MAGISTRALES" class="link">
                 <img src="<?php echo get_template_directory_uri( ).'/img/2022/arrow-right-color.png' ?>" alt="">
             </a>
         </div>
@@ -44,26 +44,26 @@
 
 
  <div class="grid-cont-three">
-    <div class="column">
+    <div class="column" data-aos="fade-up">
         <div class="title">Ventas
         <br>
-            <a href="#" class="link">
+            <a href="<?php echo get_home_url(); ?>/lista-de-videos/?eje=VENTAS" class="link">
                 <img src="<?php echo get_template_directory_uri( ).'/img/2022/arrow-right-white.png' ?>" alt="">
             </a>
         </div>
     </div>
-    <div class="column">
+    <div class="column" data-aos="fade-up">
         <div class="title">Innovación <br> y transformación digital
         <br>
-            <a href="#" class="link">
+            <a href="<?php echo get_home_url(); ?>/lista-de-videos/?eje=INNOVACIÓN Y TRANSFORMACIÓN DIGITAL" class="link">
                 <img src="<?php echo get_template_directory_uri( ).'/img/2022/arrow-right-white.png' ?>" alt="">
             </a>
         </div>
     </div>
-    <div class="column">
+    <div class="column" data-aos="fade-up">
         <div class="title">Finanzas <br>y Financiamiento
         <br>
-            <a href="#" class="link">
+            <a href="<?php echo get_home_url(); ?>/lista-de-videos/?eje=FINANZAS Y FINANCIAMIENTO" class="link">
                 <img src="<?php echo get_template_directory_uri( ).'/img/2022/arrow-right-white.png' ?>" alt="">
             </a>
         </div>
@@ -72,46 +72,46 @@
 
 
  <div class="grid-cont-two">
-    <div class="column">
+    <div class="column" data-aos="fade-up">
         <div class="title">Recursos Humano <br>y desarrollo <br>organizacional
         <br>
-            <a href="#" class="link">
+            <a href="<?php echo get_home_url(); ?>/lista-de-videos/?eje=RRHH Y DESARROLLO ORGANIZACIONAL" class="link">
                 <img src="<?php echo get_template_directory_uri( ).'/img/2022/arrow-right-white.png' ?>" alt="">
             </a>
         </div>
     </div>
-    <div class="column">
+    <div class="column" data-aos="fade-up">
         <div class="title">Marketing
         <br>
-            <a href="#" class="link">
+            <a href="<?php echo get_home_url(); ?>/lista-de-videos/?eje=MARKETING" class="link">
                 <img src="<?php echo get_template_directory_uri( ).'/img/2022/arrow-right-white.png' ?>" alt="">
             </a>
         </div>
     </div>
-    <div class="column">
-        <div class="title">Recursos Humano <br>y desarrollo <br>organizacional
+    <div class="column" data-aos="fade-up">
+        <div class="title">Empresas Familiares y RSE
         <br>
-            <a href="#" class="link">
+            <a href="<?php echo get_home_url(); ?>/lista-de-videos/?eje=EMPRESAS FAMILIARES Y RSE" class="link">
                 <img src="<?php echo get_template_directory_uri( ).'/img/2022/arrow-right-white.png' ?>" alt="">
             </a>
         </div>
     </div>
-    <div class="column">
-        <div class="title">Marketing
+    <div class="column" data-aos="fade-up">
+        <div class="title">Emprendimiento
         <br>
-            <a href="#" class="link">
+            <a href="<?php echo get_home_url(); ?>/lista-de-videos/?eje=EMPRENDIMIENTO" class="link">
                 <img src="<?php echo get_template_directory_uri( ).'/img/2022/arrow-right-white.png' ?>" alt="">
             </a>
         </div>
     </div>
  </div>
 
- <div class="menu-tabs" id="expositores-magistrales">
+ <div class="menu-tabs" id="expositores-magistrales" data-aos="fade-up">
     <div class="menu_title">
         conferencias destacadas
 
     </div>
-    <ul>
+    <ul data-aos="fade-up">
         <li data-button="miercoles" class="tab-button active">miércoles 17</li>
         <li data-button="jueves" class="tab-button">jueves 18</li>
         <li data-button="viernes" class="tab-button">viernes 19</li>
@@ -119,14 +119,14 @@
 </div>
 
 <div class="tabs-content">
-    <div data-tab="miercoles" class="tab active">
+    <div data-tab="miercoles" class="tab active" data-aos="fade-up">
         <div class="title">
         <span>MIÉRCOLES 17 DE AGOSTO</span> <br>
         -<br>
         INAUGURACIÓN - 10:30 HORAS
         </div>
 
-        <div class="container grid-users">
+        <div class="container grid-users" >
             <div class="columns">
                 <div class="item">
                     <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Tatiana Clouthier.png' ?>" alt="">
@@ -142,7 +142,7 @@
                 </div>
 
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Alexis Sepulveda.png' ?>" alt="">
 
                     <div class="desc">
                         <div class="second">Conferencia magistral:</div>
@@ -150,7 +150,7 @@
                         <br>
                         <div class="second">AUTYCOM</div>
                         <div class="second">14:30 A 15:30 HRS</div>
-                        <div class="primary">AMAZON</div>
+                        <div class="primary">Alexis Sepulveda</div>
                     </div>
                 </div>
                 <div class="item">
@@ -166,7 +166,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/José Pinto.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/JosePinto.png' ?>" alt="">
 
                     <div class="desc">
                         <div class="second">Conferencia magistral:</div>
@@ -250,7 +250,7 @@
                 </div>
 
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Alfonso de los Ríos.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/AlfonsodelosRios.png' ?>" alt="">
 
                     <div class="desc">
                         <div class="second">Conferencia magistral:</div>
@@ -282,7 +282,7 @@
                 </div>
 
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Ricardo Rentería.png' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/RicardoRenteria.png' ?>" alt="">
 
                     <div class="desc">
                         <div class="second">Conferencia magistral:</div>
@@ -393,7 +393,7 @@
                 </div>
 
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Gonzalo Matteoda.png' ?>" alt="">
 
                     <div class="desc">
                         <div class="second">Conferencia magistral: </div>
@@ -404,10 +404,7 @@
                         <div class="second">AUTYCOM</div>
                         <div class="second">17:00 A 18:00 HRS</div>
                         <div class="primary">
-                            Gerardo Pérez Lechuga, <br>
-                            <small>
-                                Head of Cloud Application Solutions, SIEMENS
-                            </small>
+                            Gonzalo Matteoda
                         </div>
                     </div>
                 </div>
@@ -587,7 +584,7 @@
                 </div>
 
                 <div class="item">
-                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri( ).'/img/2022/conferencias_on_demand/Ramon Garza.png' ?>" alt="">
 
                     <div class="desc">
                         <div class="second">Conferencia magistral:</div>
@@ -596,7 +593,7 @@
                         <div class="second">AUTYCOM</div>
                         <div class="second">17:00 A 18:00 HRS</div>
                         <div class="primary">
-                            Microsoft
+                            Ramon Garza
                         </div>
                     </div>
                 </div>
@@ -605,7 +602,7 @@
     </div>
 </div>
 
-<div class="table-cont" id="lista-de-conferencias">
+<div class="table-cont" id="lista-de-conferencias" data-aos="fade-up">
     <div class="filters_cont">
         <div class="search-cont">
             <input id="search-conf" type="text" placeholder="Buscar conferencia">
@@ -616,6 +613,7 @@
         <div class="dropdown-cont">
             <p>Filtrar por ejes:</p>
             <select name="select-ejes" id="select-ejes">
+                <option value="ALL">TODOS LOS EJES</option>
                 <option value="CONFERENCIAS Y PANELES MAGISTRALES">CONFERENCIAS Y PANELES MAGISTRALES</option>
                 <option value="EMPRENDIMIENTO">EMPRENDIMIENTO</option>
                 <option value="EMPRESAS FAMILIARES Y RSE">EMPRESAS FAMILIARES Y RSE</option>
@@ -649,7 +647,7 @@
                     $loop->the_post();
                     $ytID = str_replace('https://youtu.be/', '', get_field('yt_video') );
                     ?>
-                    <tr data-eje="<?php echo get_field('eje')?>">
+                    <tr data-eje="<?php echo get_field('eje')?>" >
                         <td class="titulo"><div class="title_text"><a  data-video-id="<?php echo get_the_ID(); ?>" data-yt-id ="<?php echo $ytID; ?>"class="expo-video-item"><strong><?php the_title(); ?></strong></a></div></td>
                         <td class="conferencista"><?php echo get_field('conferencista'); ?></td>
                         <td class="eje"><?php echo get_field('eje')?></td>
@@ -659,6 +657,48 @@
                 ?>
             </tbody>
         </table>
+    </div>
+</div>
+
+<div class="pat-cont" data-aos="fade-up">
+    <div class="title">
+        Patrocinadores Institucionales
+    </div>
+    <div class="grid-pat">
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Alen-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Alfa-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Aquor-01.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Arca Continental-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/ArcelorMittal-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Autlan-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Banorte-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/BAT-MEXICO-AZUL.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Carrier-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Cemex-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Clarios-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Coflex-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Cuprum-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Cydsa-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Energy Intelligence-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Epscon-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/FANASA BLACK.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Femsa-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Frisa-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/GREENPAPER_10x2.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Iberdrola-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/JAITER-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Lamosa-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/ProDynamics-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Quimmco-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Ragasa-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Rengra-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Reynera-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Sanilock-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Senda.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Teleperformance.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Ternium-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Vitro-02.png' ?>" alt=""></div>
+    <div class="item-cont"><img src="<?php echo get_template_directory_uri( ).'/img/2022/logos_patrocinadores/Xignux-02.png' ?>" alt=""></div>
     </div>
 </div>
 <?php

@@ -58,7 +58,7 @@
 .video-titulo{
     text-align: center;
     font-size: 24px;
-display: none;
+    display: none;
     text-transform: uppercase;
     background-color: #e5202e;
     color: white;
@@ -70,13 +70,14 @@ display: none;
 .videos_cont{
     display: flex;
     align-items: stretch;
-    justify-content: center;
+    justify-content: start;
     flex-wrap: wrap;
     flex-direction: row;
 
     .item{
         min-width: 320px;
-        flex: 1 0 48%;
+        flex: 1 0 50%;
+        max-width: 50%;
         display: flex;
         align-items: stretch;
         justify-content: center;
