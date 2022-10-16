@@ -2,6 +2,26 @@ body, html {
   scroll-behavior: smooth;
 }
 
+.logos-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.logos-cont img.logo-pat {
+  width: auto;
+  max-width: 100px;
+  display: block;
+}
+
 .modal-video-cont {
   position: fixed;
   top: 0;
@@ -603,4 +623,50 @@ body, html {
   padding: 10px;
   background-image: url(../img//2022/play-button.png);
   background-size: cover;
+}
+
+.pat-cont {
+  padding: 40px;
+}
+.pat-cont .title {
+  text-transform: uppercase;
+  width: 100%;
+  margin: 0 auto;
+  color: #e5202e;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+}
+.pat-cont .grid-pat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.pat-cont .grid-pat .item-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 13%;
+}
+.pat-cont .grid-pat .item-cont img {
+  margin: 10px;
+  max-height: 80px;
 }

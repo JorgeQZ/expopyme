@@ -22,8 +22,13 @@ $(document).ready(function () {
      */
     $('#select-ejes').on("input", function () {
         let eje = $(this).val();
-        $('.lista-videos_cont tbody tr').hide();
-        $(".lista-videos_cont tbody tr[data-eje='" + eje + "']").fadeIn();
+
+        if (eje === "ALL") {
+            $('.lista-videos_cont tbody tr').fadeIn();
+        } else {
+            $('.lista-videos_cont tbody tr').hide();
+            $(".lista-videos_cont tbody tr[data-eje='" + eje + "']").fadeIn();
+        }
     });
 
     /**
