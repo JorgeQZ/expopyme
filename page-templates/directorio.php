@@ -7,7 +7,7 @@ get_header(); ?>
 
  <div class="banner_hero">
     <div class="container py-7 w-100">
-        <h1 class="t-blanco mayusculas" data-aos="fade-up">EXPO PYME 2022</h1>
+        <h1 class="t-blanco mayusculas" data-aos="fade-up">EXPOSITORES</h1>
     </div>
  </div>
 
@@ -75,24 +75,17 @@ get_header(); ?>
                         </a>
                     <?php endif; ?>
 
-                    <?php
-                    if(get_field('facebook')):
-
-                        if(strpos(get_field('facebook'),"@")  !== false  ){
-                            echo '@';
-                            $fb = 'https://www.facebook.com/'.str_replace('@', '', get_field('facebook'));
-                        }
-                        ?>
-                    <a href="<?php echo $fb ?>" class="directorio__item__sociales__link">
-                    <img src="<?php echo get_template_directory_uri().'/img/2022/facebook.png' ?>" alt="">
+                   <?php if(get_field('facebook')): ?>
+					<a target="_blank" href="https://www.facebook.com/<?php echo preg_replace('/\s+/', '', get_field('facebook')) ?>" class="directorio__item__sociales__link">
+						<img src="<?php echo get_template_directory_uri().'/img/2022/facebook.png' ?>" alt="">
                     </a>
-                    <?php endif; ?>
+					<?php endif; ?>
 
-                    <?php if(get_field('twitter')): ?>
-                    <a href="<?php echo get_field('twitter') ?>" class="directorio__item__sociales__link">
-                    <img src="<?php echo get_template_directory_uri().'/img/2022/twiiter.png' ?>" alt="">
-                    </a>
-                    <?php endif; ?>
+					   <?php if(get_field('twitter')): ?>
+                    <a target="_blank" href="https://twitter.com/<?php echo preg_replace('/\s+/', '', get_field('twitter')) ?>" class="directorio__item__sociales__link">
+                    	<img src="<?php echo get_template_directory_uri().'/img/2022/twiiter.png' ?>" alt="">
+					</a>
+					<?php endif; ?>
                 </div>
 
             </div>

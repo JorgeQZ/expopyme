@@ -68,24 +68,70 @@ $(document).ready(function () {
     $('.close-button').on('click', function (e) {
         $('#modal-video').empty();
         $('.modal-video-cont').hide();
+        player.pauseVideo();
+
+        console.log(currentSecPlayedToSave);
+        if (currentSecPlayedToSave >= minimunSecstoSaveView) {
+            console.log('se debe guardar el video ');
+            recordView();
+        }
+
         resetPlayer();
     });
 
     $('.expo-video-item').on('click', function (e) {
-        $('.modal-video-cont').fadeIn().css({ 'display': 'flex' });
-        let ytID = $(this).data('yt-id');
-        let videoID = $(this).data('video-id');
-        initVideoSelected(ytID, videoID);
-        $('#modal-title').text($(this).text());
+        let element = $(this);
+        isUserLogged(element);
+
+    });
+
+    $('.close-loggin').on('click', function (e) {
+        $('.modal-loggin').removeClass('active');
     });
 });
+
+/**
+ * Revisa si el usuario está loggeado
+ */
+let userLogged;
+function isUserLogged(element) {
+    if (userLogged === undefined) {
+        $.ajax({
+            type: 'POST',
+            url: ajax_query_vars.ajax_url,
+            data: { 'action': 'isUserLogged' },
+            dataType: 'json',
+            success: function (isUserLogged) {
+                if (isUserLogged == true) {
+                    userLogged = true;
+                    $('.modal-video-cont').fadeIn().css({ 'display': 'flex' });
+                    let ytID = $(element).data('yt-id');
+                    let videoID = $(element).data('video-id');
+                    initVideoSelected(ytID, videoID);
+                    $('#modal-title').text($(element).text());
+                } else {
+                    userLogged = false;
+                    $('.modal-loggin').addClass('active');
+                }
+            }
+        });
+    } else if (!userLogged) {
+        $('.modal-loggin').addClass('active');
+    } else {
+        $('.modal-video-cont').fadeIn().css({ 'display': 'flex' });
+        let ytID = $(element).data('yt-id');
+        let videoID = $(element).data('video-id');
+        initVideoSelected(ytID, videoID);
+        $('#modal-title').text($(element).text());
+    }
+}
 
 /**
  * Funciones de los videos en los pop ups
  *
  */
-let player, timer, timeSpent = [], display = document.getElementById('display'), modalVideo, currentVideoID;
-let done = false;
+let divPlayer, player, timer, timeSpent = [], display = document.getElementById('display'), modalVideo, currentVideoID, currentSecInit, currentSecPlayed = 0, currentSecPlayedToSave, minimunSecstoSaveView = 900;
+
 function resetPlayer() {
     /**
      * Se remueve el iframe
@@ -105,7 +151,7 @@ function resetPlayer() {
      */
     document.getElementById('modal-video-cont').appendChild(divPlayer);
 }
-
+// function checkCurrentVideoID(videoPlaying) { return currentVideoID == videoPlaying; }
 function selectedVideoIframe(div) {
 
     // console.log(div);
@@ -117,29 +163,28 @@ function selectedVideoIframe(div) {
             showinfo: 0,
             autoplay: 0,
             loop: 0,
-            modestbranding: 1
         },
         events: {
             'onStateChange': cambioDeEstado
         }
     })
 
-    currentVideoID = $(div).attr('data-video-id');
     var iframe = document.createElement('iframe');
     iframe.setAttribute('src', 'https://youtube.com/embed/' + $(div).attr('data-yt-id') + '?enablejsapi=1&origin=http://localhost');
     iframe.setAttribute('frameborder', '0');
-    iframe.setAttribute('data-video-id', $(div).attr('data-video-id'));
+
     iframe.setAttribute('anonymous', '1');
     iframe.setAttribute('allowfullscreen', '1');
     iframe.setAttribute('allow', 'controls, accelerometer; encrypted-media; gyroscope; picture-in-picture; ');
+    // iframe.setAttribute('data-video-id', $(div).attr('data-video-id'));
 
     div.parentNode.replaceChild(iframe, div);
-    console.log('currentVideoID', currentVideoID);
+    $('#modal-video').attr('data-video-id', $(div).attr('data-video-id'));
 }
 
 function initVideoSelected(ytID, videoID) {
     let playerElement = document.getElementById("modal-video");
-    let divPlayer = document.createElement('div');
+    divPlayer = document.createElement('div');
     divPlayer.setAttribute('data-yt-id', ytID);
     divPlayer.setAttribute('data-video-id', videoID);
 
@@ -157,20 +202,34 @@ function initVideoSelected(ytID, videoID) {
 }
 
 function cambioDeEstado(event) {
-    if (event.data == YT.PlayerState.PLAYING && !done) { // Started playing
-        console.log('reproduciendo', event.target.getDuration())
-        setTimeout(recordView, 1000);
+
+    if (currentVideoID !== $('#modal-video').attr('data-video-id')) {
+        currentVideoID = $('#modal-video').attr('data-video-id');
+        currentSecInit = event.target.getCurrentTime();
     }
+
+    if (event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
+        currentSecPlayed = event.target.getCurrentTime();
+        currentSecPlayedToSave = currentSecPlayed - currentSecInit;
+    }
+
+    if (event.data == YT.PlayerState.ENDED) {
+        currentSecPlayedToSave = event.target.getCurrentTime(); - currentSecInit;
+        if (currentSecPlayedToSave >= minimunSecstoSaveView) {
+            recordView();
+        }
+    }
+
 }
 
 function recordView() {
     $.ajax({
         type: 'POST',
         url: ajax_query_vars.ajax_url,
-        data: { 'action': 'recordView', 'currentVideoID': currentVideoID },
+        data: { 'action': 'recordView', 'currentVideoID': currentVideoID, 'currentSecPlayedToSave': currentSecPlayedToSave },
         dataType: 'json',
         success: function (msg) {
-            console.log(msg);
+            // console.log(msg);
         }
     });
 }

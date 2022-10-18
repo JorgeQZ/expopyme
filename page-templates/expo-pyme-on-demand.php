@@ -5,6 +5,20 @@
 
  get_header();
 ?>
+
+<div class="modal-loggin">
+
+        <div class="box">
+            <div class="content">
+                <div class="close-loggin">+</div>
+                <p>Para ver el contenido de<br>este video debes</p>
+                <div class="text-center d-flex align-items-center" style="justify-content: center;">
+                    <a href="<?php echo get_home_url().'/login' ?>"  id="home-reg" class="btn-per-4 fw-700 mayusculas ">Iniciar Sesión</a><br>
+                </div>
+
+        </div>
+    </div>
+</div>
 <div class="modal-video-cont" id="modal-video-cont">
     <div class="close-button">+</div>
 
@@ -112,16 +126,16 @@
 
     </div>
     <ul data-aos="fade-up">
-        <li data-button="miercoles" class="tab-button active">miércoles 17</li>
-        <li data-button="jueves" class="tab-button">jueves 18</li>
-        <li data-button="viernes" class="tab-button">viernes 19</li>
+        <li data-button="miercoles" class="tab-button active">Día 1</li>
+        <li data-button="jueves" class="tab-button">Día 2</li>
+        <li data-button="viernes" class="tab-button">Día 3</li>
     </ul>
 </div>
 
 <div class="tabs-content">
     <div data-tab="miercoles" class="tab active" data-aos="fade-up">
         <div class="title">
-        <span>MIÉRCOLES 17 DE AGOSTO</span> <br>
+        <span>DÍA 1</span> <br>
         -<br>
         INAUGURACIÓN - 10:30 HORAS
         </div>
@@ -135,8 +149,8 @@
                         <div class="second">Conferencia magistral:</div>
                         <div class="primary">Las MiPymes como eje central de la economía</div>
                         <br>
-                        <div class="second">DOCUSIGN</div>
-                        <div class="second">14:30 A 15:30 HRS</div>
+                        <!--div class="second">DOCUSIGN</!--div-->
+                        <!--div class="second">14:30 A 15:30 HRS</!--div-->
                         <div class="primary">Tatiana Clouthier<br><small>Secretaría de Economía</small></div>
                     </div>
                 </div>
@@ -148,8 +162,8 @@
                         <div class="second">Conferencia magistral:</div>
                         <div class="primary">AMAZON</div>
                         <br>
-                        <div class="second">AUTYCOM</div>
-                        <div class="second">14:30 A 15:30 HRS</div>
+                        <!--div class="second">AUTYCOM</!--div-->
+                        <!--div class="second">14:30 A 15:30 HRS</!--div-->
                         <div class="primary">Alexis Sepulveda</div>
                     </div>
                 </div>
@@ -172,8 +186,8 @@
                         <div class="second">Conferencia magistral:</div>
                         <div class="primary">Retos en la industria de aplicaciones tecnológicas</div>
                         <br>
-                        <div class="second">AUTYCOM</div>
-                        <div class="second">15:45 A 16:45 HRS</div>
+                        <!--div class="second">AUTYCOM</!--div-->
+                        <!--div class="second">15:45 A 16:45 HRS</!--div-->
                         <div class="primary">
                             José Pinto<br>
                             <small>
@@ -208,8 +222,8 @@
                         <div class="second">Conferencia magistral:</div>
                         <div class="primary">AUTYCOM</div>
                         <br>
-                        <div class="second">AUTYCOM</div>
-                        <div class="second">17:00 A 10:30 HRS</div>
+                        <!--div class="second">AUTYCOM</!--div-->
+                        <!--div class="second">17:00 A 10:30 HRS</!--div-->
                         <div class="primary">
                             Rafael Niell, <br>
                             <small>
@@ -224,7 +238,7 @@
     </div>
     <div data-tab="jueves" class="tab">
         <div class="title">
-        <span>JUEVES 18 DE AGOSTO</span> <br>
+        <span>DÍA 2</span> <br>
         -<br>
         INAUGURACIÓN - 10:30 HORAS
         </div>
@@ -238,8 +252,8 @@
                         <div class="second">Panel:</div>
                         <div class="primary">Industrial Tech: El rumbo de la tecnología en el sector industrial</div>
                         <br>
-                        <div class="second">DOCUSIGN</div>
-                        <div class="second">10:30 A 11:30 HRS</div>
+                        <!--div class="second">DOCUSIGN</!--div-->
+                        <!--div class="second">10:30 A 11:30 HRS</!--div-->
                         <div class="primary">
                             Lissy Giacomán, <small>CEO, Vinco</small><br>
                             Ricardo Cevada, <small>CEO, Skills For Industry</small><br>
@@ -256,8 +270,8 @@
                         <div class="second">Conferencia magistral:</div>
                         <div class="primary">De startup a unicornio en menos de 4 años</div>
                         <br>
-                        <div class="second">AUTYCOM</div>
-                        <div class="second">09:30 A 10:30 HRS</div>
+                        <!--div class="second">AUTYCOM</!--div-->
+                        <!--div class="second">09:30 A 10:30 HRS</!--div-->
                         <div class="primary">
                             Alfonso de los Ríos, <br>
                             <small>
@@ -288,8 +302,8 @@
                         <div class="second">Conferencia magistral:</div>
                         <div class="primary">¿Cómo la nube de Amazon Web Services (AWS) se puede convertir en tu mejor aliado de nogocio?</div>
                         <br>
-                        <div class="second">AUTYCOM</div>
-                        <div class="second">11:45 A 12:45 HRS</div>
+                        <!--div class="second">AUTYCOM</!--div-->
+                        <!--div class="second">11:45 A 12:45 HRS</!--div-->
                         <div class="primary">Ricardo Rentería, <br>
                             <small>Director Comercial, <br> Amazon Web Services</small>
                         </div>
@@ -305,8 +319,8 @@
                             La tendencia actual en supply chain. Cómo lograr ser proveedor de empresas multinacionales.
                         </div>
                         <br>
-                        <div class="second">DOCUSIGN</div>
-                        <div class="second">14:30 A 15:30 HRS</div>
+                        <!--div class="second">DOCUSIGN</!--div-->
+                        <!--div class="second">14:30 A 15:30 HRS</!--div-->
                         <div class="primary">
                             Gladis Araujo, <br>
                             <small>VP Global de Calidad, MATTEL</small><br>
@@ -327,8 +341,8 @@
                             Líderes empresarios del noreste
                         </div>
                         <br>
-                        <div class="second">AUTYCOM</div>
-                        <div class="second">14:30 A 15:30 HRS</div>
+                        <!--div class="second">AUTYCOM</!--div-->
+                        <!--div class="second">14:30 A 15:30 HRS</!--div-->
                         <div class="primary">
                         César Jiménez, <br><small>Presidente Ejectuvo, TERNIUM</small><br>
                         Leopoldo Cedillo, <br><small>CEO, PROEZA</small>
@@ -346,8 +360,8 @@
                            El fututo es de los vagos
                         </div>
                         <br>
-                        <div class="second">DOCUSIGN</div>
-                        <div class="second">15:45 A 16:45 HRS</div>
+                        <!--div class="second">DOCUSIGN</!--div-->
+                        <!--div class="second">15:45 A 16:45 HRS</!--div-->
                         <div class="primary">
                             Leo Piccioli, <br><small>LinkedIn Top Voice</small><br>
                         </div>
@@ -363,8 +377,8 @@
                             Hablidades del futuro y cómo liderarlo
                         </div>
                         <br>
-                        <div class="second">AUTYCOM</div>
-                        <div class="second">15:45 A 16:45 HRS</div>
+                        <!--div class="second">AUTYCOM</!--div-->
+                        <!--div class="second">15:45 A 16:45 HRS</!--div-->
                         <div class="primary">
                         Gladis Araujo, <br><small>VP Global de Calidad, MATTEL</small><br>
                         Martha Barroso, <br><small>Directora de People & Culture, Manpower</small>
@@ -382,8 +396,8 @@
                             Integración de las PyMES en las cadenas de valor
                         </div>
                         <br>
-                        <div class="second">DOCUSIGN</div>
-                        <div class="second">17:00 A 18:00 HRS</div>
+                        <!--div class="second">DOCUSIGN</!--div-->
+                        <!--div class="second">17:00 A 18:00 HRS</!--div-->
                         <div class="primary">
                         Carlos Rodríguez, <br><small>Procurement Regional Director, Exiros</small><br>
                         Juan Antonio Espinosa, <br><small>Director de Abastecimientos, CEMEX</small><br>
@@ -401,8 +415,8 @@
                             La transformación digital al alcance de todos
                         </div>
                         <br>
-                        <div class="second">AUTYCOM</div>
-                        <div class="second">17:00 A 18:00 HRS</div>
+                        <!--div class="second">AUTYCOM</!--div-->
+                        <!--div class="second">17:00 A 18:00 HRS</!--div-->
                         <div class="primary">
                             Gonzalo Matteoda
                         </div>
@@ -413,7 +427,7 @@
     </div>
     <div data-tab="viernes" class="tab">
         <div class="title">
-        <span>VIERNES 19 DE AGOSTO</span> <br>
+        <span>DÍA 3</span> <br>
         -<br>
         INAUGURACIÓN - 10:30 HORAS
         </div>
@@ -449,8 +463,8 @@
                         <div class="second">Conferencia magistral:</div>
                         <div class="primary">Los elementos del éxito en los negocios</div>
                         <br>
-                        <div class="second">AUTYCOM</div>
-                        <div class="second">10:30 A 11:30 HRS</div>
+                        <!--div class="second">AUTYCOM</!--div-->
+                        <!--div class="second">10:30 A 11:30 HRS</!--div-->
                         <div class="primary">
                             Pedro Eloy Ramirez, <br>
                             <small>
@@ -466,8 +480,8 @@
                         <div class="second">Conferencia magistral:</div>
                         <div class="primary">Firmas electrónicas: el último reto de la transformación digital</div>
                         <br>
-                        <div class="second">DOCUSIGN</div>
-                        <div class="second">11:45 A 12:45 HRS</div>
+                        <!--div class="second">DOCUSIGN</!--div-->
+                        <!--div class="second">11:45 A 12:45 HRS</!--div-->
                         <div class="primary">
                             Iván Rivas, <br>
                             <small>
@@ -483,8 +497,8 @@
                         <div class="second">Conferencia magistral:</div>
                         <div class="primary">¿Por qué elevar la apuesta por un modelo híbrido?</div>
                         <br>
-                        <div class="second">AUTYCOM</div>
-                        <div class="second">11:45 a 12:45 HRS</div>
+                        <!--div class="second">AUTYCOM</!--div-->
+                        <!--div class="second">11:45 a 12:45 HRS</!--div-->
                         <div class="primary">
                             Álvaro Villar, <br>
                             <small>
@@ -517,8 +531,8 @@
                         <div class="second">Conferencia magistral:</div>
                         <div class="primary">Oportunidades en la tencnología para la internacionalización de las PyMES mexicanas</div>
                         <br>
-                        <div class="second">AUTYCOM</div>
-                        <div class="second">14:30 A 15:30 HRS</div>
+                        <!--div class="second">AUTYCOM</!--div-->
+                        <!--div class="second">14:30 A 15:30 HRS</!--div-->
                         <div class="primary">
                             Andrés Díaz Bedolla, <br>
                             <small>
@@ -535,8 +549,8 @@
                         <div class="second">Conferencia magistral:</div>
                         <div class="primary">De gerente comercial a gerente de growth</div>
                         <br>
-                        <div class="second">DOCUSIGN</div>
-                        <div class="second">15:45 A 16:45 HRS</div>
+                        <!--div class="second">DOCUSIGN</!--div-->
+                        <!--div class="second">15:45 A 16:45 HRS</!--div-->
                         <div class="primary">
                            Carlos Ranero, <br>
                            <small>
@@ -554,8 +568,8 @@
                         <div class="second">Conferencia magistral:</div>
                         <div class="primary">Cautiva a tu cliente con un gran mensaje</div>
                         <br>
-                        <div class="second">AUTYCOM</div>
-                        <div class="second">15:45 A 16:45 HRS</div>
+                        <!--div class="second">AUTYCOM</!--div-->
+                        <!--div class="second">15:45 A 16:45 HRS</!--div-->
                         <div class="primary">
                            Alberto Achar, <br>
                            <small>
@@ -572,8 +586,8 @@
                         <div class="second">Conferencia magistral:</div>
                         <div class="primary"></div>
                         <br>
-                        <div class="second">DOCUSIGN</div>
-                        <div class="second">17:00 A 18:00 HRS</div>
+                        <!--div class="second">DOCUSIGN</!--div-->
+                        <!--div class="second">17:00 A 18:00 HRS</!--div-->
                         <div class="primary">
                           Omar Carrera, <br>
                            <small>
@@ -590,8 +604,8 @@
                         <div class="second">Conferencia magistral:</div>
                         <div class="primary"></div>
                         <br>
-                        <div class="second">AUTYCOM</div>
-                        <div class="second">17:00 A 18:00 HRS</div>
+                        <!--div class="second">AUTYCOM</!--div-->
+                        <!--div class="second">17:00 A 18:00 HRS</!--div-->
                         <div class="primary">
                             Ramon Garza
                         </div>

@@ -17,6 +17,84 @@
   font-size: 6em !important;
 }
 
+.modal-loggin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+.modal-loggin.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.modal-loggin .box {
+  width: 90%;
+  max-width: 500px;
+  height: 300px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px;
+  position: relative;
+  -webkit-box-shadow: 0 0 40px -2px #e5202e;
+          box-shadow: 0 0 40px -2px #e5202e;
+}
+.modal-loggin .box .close-loggin {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #e5202e;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 30px;
+  color: white;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+  cursor: pointer;
+}
+.modal-loggin .box .close-loggin:hover {
+  background-color: #430026;
+}
+.modal-loggin .box p {
+  font-weight: bold;
+  color: #e5202e;
+  font-size: 20px;
+  line-height: 1;
+}
+.modal-loggin .box .content {
+  text-align: center;
+}
+.modal-loggin .box .content #home-reg:hover {
+  background-color: #430026;
+}
+
 .filter__cont {
   margin: 0 auto;
   display: -webkit-box;

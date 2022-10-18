@@ -5,6 +5,18 @@
 
 get_header();
 ?>
+<div class="modal-loggin">
+    <div class="box">
+        <div class="content">
+            <div class="close-loggin">+</div>
+            <p>Para ver el contenido de<br>este video debes</p>
+            <div class="text-center d-flex align-items-center" style="justify-content: center;">
+                <a href="<?php echo get_home_url().'/login' ?>"  id="home-reg" class="btn-per-4 fw-700 mayusculas ">Iniciar Sesión</a><br>
+            </div>
+        </div>
+    </div>
+</div>
+
  <div class="banner_hero">
     <div class="container py-7 w-100">
         <h1 class="t-blanco mayusculas" data-aos="fade-up">CONFERENCIAS</h1>
@@ -50,7 +62,7 @@ while ( $loop->have_posts() ) : $loop->the_post();
     ?>
 
     <div class="item" data-eje="<?php echo get_field('eje') ?>">
-        <div class="expo-video" id="<?php echo 'video-'.get_the_ID(); ?>" data-yt-id="<?php echo $ytID; ?>" > </div>
+        <div class="expo-video" id="<?php echo get_the_ID(); ?>" data-yt-id="<?php echo $ytID; ?>" > </div>
         <div class="title"><?php the_title(); ?></div>
     </div>
     <?php

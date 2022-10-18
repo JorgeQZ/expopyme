@@ -1,5 +1,4 @@
 <?php
-header('Access-Control-Allow-Origin: *');
 /**
  * expopyme functions and definitions
  *
@@ -8,6 +7,8 @@ header('Access-Control-Allow-Origin: *');
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
+
+ include "inc/custom_analytics/custom_analytics.php";
 
 if ( !class_exists( 'ReduxFramework' ) && file_exists( dirname( __FILE__ ) . '/ReduxFramework/ReduxCore/framework.php' ) ) {
     require_once( dirname( __FILE__ ) . '/ReduxFramework/ReduxCore/framework.php' );
@@ -198,16 +199,29 @@ function expopyme_scripts() {
 
 	if(is_page_template("page-templates/lista-videos.php")){
 		wp_enqueue_style( 'lista-videos', get_template_directory_uri() . '/css/lista-videos.css' );
+		// wp_enqueue_script( 'lista_videos', get_template_directory_uri() . '/js/lista_videos.js', array( 'jquery' ) );
+		wp_enqueue_script( 'lista-videos', get_template_directory_uri() . '/js/lista-videos.js', array ( 'jquery' ), 1.1, true);
+		wp_localize_script('lista-videos', 'ajax_query_vars', array(
+			'ajax_url' => admin_url('admin-ajax.php'),
+			'nonce'  => wp_create_nonce('wp_rest')
+		));
+
+
 	}
 
 
 	if(is_page_template("page-templates/expo-pyme-on-demand.php")){
+		wp_enqueue_script('jquery');
+
 		wp_enqueue_style( 'expo_pyme_ondemand', get_template_directory_uri() . '/css/expo_pyme_ondemand.css' );
 		wp_enqueue_script( 'ondemand', get_template_directory_uri() . '/js/ondemand.js', array( 'jquery' ) );
 		wp_localize_script('ondemand', 'ajax_query_vars', array(
 			'ajax_url' => admin_url('admin-ajax.php'),
 			'nonce'  => wp_create_nonce('wp_rest')
 		));
+
+		// wp_enqueue_script( 'tracking-videos', get_template_directory_uri() . '/js/tracking-videos.js', array ( 'jquery' ), 1.1, true);
+
 	}
 }
 add_action( 'wp_enqueue_scripts', 'expopyme_scripts' );
@@ -613,28 +627,45 @@ add_action('wp_ajax_recordView', 'recordView');
 
 function recordView(){
 	global $wpdb;
-	date_default_timezone_set('America/Monterrey');
+	if(is_user_logged_in(  )){
+		date_default_timezone_set('America/Monterrey');
 
-	$currentVideoID = $_POST['currentVideoID'];
-	$currentUserID = get_current_user_id();
-	$currentDate = date("Y-m-d H:i:s");
-	// $data = array(
-	// 	'currentVideoID' => $currentVideoID,
-	// 	'currentUserID' => $currentUserID,
-	// 	'currentDate' => $currentDate
-	// );
+		$currentVideoID = $_POST['currentVideoID'];
+		$currentSecPlayedToSave = $_POST['currentSecPlayedToSave'];
+		$currentUserID = get_current_user_id();
+		$currentDate = date("Y-m-d H:i:s");
+		// $data = array(
+		// 	'currentVideoID' => $currentVideoID,
+		// 	'currentUserID' => $currentUserID,
+		// 	'currentDate' => $currentDate
+		// );
 
-    echo json_encode(
-		$wpdb->insert(
-			'wp_expovideos',
-			array(
-				'user_id' => $currentUserID,
-				'video_id' => $currentVideoID,
-				'date' => $currentDate
+		echo json_encode(
+			$wpdb->insert(
+				'wp_expovideos',
+				array(
+					'user_id' => $currentUserID,
+					'video_id' => $currentVideoID,
+					'secViewed' => $currentSecPlayedToSave,
+					'date' => $currentDate
+				)
 			)
-		)
-	);
+		);
 
+	}
     exit;
+
 }
+
+
+
+
+add_action('wp_ajax_nopriv_isUserLogged', 'isUserLogged');
+add_action('wp_ajax_isUserLogged', 'isUserLogged');
+
+function isUserLogged(){
+	echo  json_encode(is_user_logged_in(  ));
+	exit();
+}
+
 
