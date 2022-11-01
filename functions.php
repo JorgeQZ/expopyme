@@ -668,4 +668,36 @@ function isUserLogged(){
 	exit();
 }
 
+function my_redirect(){
+    $redirect_url = basename($_SERVER['REQUEST_URI']);
+    if(!empty($_REQUEST['redirect_to'])){
+        wp_safe_redirect($_REQUEST['redirect_to']);
+    } else {
+        wp_redirect($redirect_url);
+    }
+    exit();
+}
+add_filter('wp_logout','my_redirect');
+add_filter( 'login_display_language_dropdown', '__return_false' );
 
+function tf_check_user_role( $roles ) {
+    /*@ Check user logged-in */
+    if ( is_user_logged_in() ) :
+        /*@ Get current logged-in user data */
+        $user = wp_get_current_user();
+        /*@ Fetch only roles */
+        $currentUserRoles = $user->roles;
+        /*@ Intersect both array to check any matching value */
+        $isMatching = array_intersect( $currentUserRoles, $roles);
+        $response = false;
+        /*@ If any role matched then return true */
+        if ( !empty($isMatching) ) :
+            $response = true;
+        endif;
+        return $response;
+    endif;
+}
+$roles = [ 'customer', 'subscriber' ];
+if ( tf_check_user_role($roles) ) :
+    add_filter('show_admin_bar', '__return_false');
+endif;

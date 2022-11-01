@@ -126,11 +126,12 @@ add_action( 'wp_enqueue_scripts', 'wp_enqueue_scripts__youtube_api' );
    global $wpdb, $post;
 
    $videoID = $_GET['video_id'];
+   $userID = $_GET['user_id'];
 
 
-   echo '<h1>ExpoPyme Analytics</h1>
+   echo '<h1><a href="'.get_home_url().'/wp-admin/admin.php?page=expopyme-analytics">ExpoPyme Analytics</a></h1>
     <hr>
-    <p>Aquí se muestran los datos rastreados de clicks y views obtenidos en el sitio. Para las métricas se usan los siguientes parametros:
+    <p>Aquí se muestran los datos rastreados de views obtenidos en el sitio. Para las métricas se usan los siguientes parametros:
 
         <ol>
             <li>Los usuarios deben estar logeados en el sitio.</li>
@@ -138,7 +139,7 @@ add_action( 'wp_enqueue_scripts', 'wp_enqueue_scripts__youtube_api' );
             <li>Detalles extras en desarrollo</li>
         </ol>
     </p>';
-   if(!$videoID):
+   if(!$videoID && !$userID):
     /***
      * VISTAS DE TABLA GENERAL
      */
@@ -169,16 +170,23 @@ add_action( 'wp_enqueue_scripts', 'wp_enqueue_scripts__youtube_api' );
     <br><br>
     <table width="100%">
         <thead style="background: black; color: white;">
-            <th width="70%">Titulo</th>
-            <th width="30%">Fecha</th>
+            <th width="20%">Titulo</th>
+			<th width="20%">Usuario</th>
+			<th width="20%">Correo</th>
+			<th width="20%">Minutos vistos</th>
+            <th width="20%">Fecha</th>
         </thead>
         <tbody>
         <?php
-         $videosViewed = $wpdb->get_results("SELECT video_id, date FROM wp_expovideos ORDER BY date DESC");
+         $videosViewed = $wpdb->get_results("SELECT video_id, user_id, secViewed, date FROM wp_expovideos ORDER BY date DESC");
         foreach ($videosViewed as $video): ?>
             <tr>
-                <td width="70%"><a href="<?php echo get_home_url().'/wp-admin/admin.php?page=expopyme-analytics&video_id='.$video->video_id;  ?>"><?php echo get_the_title($video->video_id) ?></a></td>
-                <td width="30%" style="text-align: center;">
+                <td width="20%"><a href="<?php echo get_home_url().'/wp-admin/admin.php?page=expopyme-analytics&video_id='.$video->video_id;  ?>"><?php echo get_the_title($video->video_id) ?></a></td>
+				<td style="text-align: center;"><a href="<?php echo get_home_url().'/wp-admin/admin.php?page=expopyme-analytics&user_id='.$video->user_id;  ?>"><?php echo get_user_by('id', $video->user_id)->display_name; ?></a></td>
+
+				<td style="text-align: center;"><?php echo get_user_by('id', $video->user_id)->user_email; ?></td>
+								<td style="text-align: center;"><?php echo round(($video->secViewed)/60, PHP_ROUND_HALF_UP) ?></td>
+                <td width="20%" style="text-align: center;">
                     <?php
                     $date = new DateTime($video->date);
                     echo $date->format('d-m-Y');
@@ -191,7 +199,114 @@ add_action( 'wp_enqueue_scripts', 'wp_enqueue_scripts__youtube_api' );
         </tbody>
     </table>
     <?php
+	 /***
+     *
+     * TABLAS DE VISTAS POR USUARIO
+     *
+     */
+	 elseif($userID):
+	?>
+	<br>
+        <button onclick="history.back()" style="background-color: #76082b; border: none; color: white; cursor: pointer; padding: 5px 10px;">Regresar</button>
+		<p style="font-size: 30px; margin-top: 5px">Usuario: <i><u><?php echo get_user_by('id', $userID)->display_name; ?> (<?php echo get_user_by('id', $userID)->user_email; ?>)</u></i></p>
+        <table style="width: 100%; text-align: center;">
+            <thead style="background: black; color: white;">
+                <th>
+                    Vistas de videos únicos
+                </th>
+                <th>
+                    Vistas en los últimos 7 días
+                </th>
+                <th>
+                    Vistas totales
+                </th>
+            </thead>
+            <tbody>
+                <tr>
 
+                    <td style="font-size: 40px; text-align: center; padding: 10px;">
+                        <?php
+                            $uniqueVideos= $wpdb->get_results("SELECT COUNT(DISTINCT video_id) AS uniqueVideos FROM wp_expovideos WHERE user_ID = $userID ORDER BY date DESC", ARRAY_A);
+                            echo $uniqueVideos[0]['uniqueVideos'];
+                        ?>
+                    </td>
+                    <td style="font-size: 40px; text-align: center; padding: 10px;">
+                        <?php
+                            $viewsWeek= $wpdb->get_results("SELECT COUNT(id) as viewsWeek FROM wp_expovideos WHERE user_ID = $userID AND date BETWEEN (NOW() - INTERVAL 7 DAY) AND NOW()", ARRAY_A);
+                            echo $viewsWeek[0]['viewsWeek'];
+                        ?>
+                    </td>
+                    <td style="font-size: 40px; text-align: center; padding: 10px;">
+                        <?php
+                            $totalViews = $wpdb->get_results("SELECT COUNT(user_id) as totalViews FROM wp_expovideos WHERE user_ID = $userID ORDER BY date DESC",ARRAY_A);
+                            echo $totalViews[0]['totalViews'];
+                        ?>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table style="width: 100%; text-align: center;">
+            <thead style="background: black; color: white;">
+                <th>
+                    Promedio de minutos vistos en los 7 últimos días
+                </th>
+                <th>
+                    Minutos totales vistos
+                </th>
+            </thead>
+            <tbody>
+                <tr>
+
+                    <td style="font-size: 40px; text-align: center; padding: 10px;">
+                        <?php
+                            $promedio = $wpdb->get_results("SELECT SUM(secViewed) as secViewed, COUNT(id) as countView FROM wp_expovideos WHERE user_ID = $userID  AND date BETWEEN (NOW() - INTERVAL 7 DAY) AND NOW()", ARRAY_A);
+                            echo round(($promedio[0]['secViewed']/$promedio[0]['countView'])/60, PHP_ROUND_HALF_UP);
+                        ?>
+                    </td>
+                    <td style="font-size: 40px; text-align: center; padding: 10px;">
+                        <?php
+                            $promedio = $wpdb->get_results("SELECT SUM(secViewed) as secViewed FROM wp_expovideos WHERE user_ID = $userID ", ARRAY_A);
+                            echo round($promedio[0]['secViewed']/60, PHP_ROUND_HALF_UP);
+                        ?>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table style="width: 100%">
+            <thead style="background: black; color: white;">
+                <th width="100%">Vistas</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                    <table width="100%">
+                        <thead>
+                            <th width="50%">Titulo</th>
+                            <th width="25%">Minutos</th>
+                            <th width="25%">Fecha</th>
+                        </thead>
+                        <tbody>
+                            <?php
+                              $videosViewed = $wpdb->get_results("SELECT video_id, secViewed, date FROM wp_expovideos WHERE user_ID = $userID ORDER BY date DESC");
+
+                                foreach ($videosViewed as $video):?>
+                                <tr>
+									<td style="text-align: center;"><a href="<?php echo get_home_url().'/wp-admin/admin.php?page=expopyme-analytics&video_id='.$video->video_id;  ?>"><?php echo get_the_title($video->video_id);  ?></a></td>
+                                    <td style="text-align: center;"><?php echo round($video->secViewed/60, PHP_ROUND_HALF_UP); ?></td>
+                                    <td style="text-align: center;"><?php $date = new DateTime($videosViewed->date); echo $date->format('d-m-Y');?> </td>
+                                </tr>
+                                <?php
+                                endforeach;
+                            ?>
+                        </tbody>
+                    </table>
+                </tr>
+            </tbody>
+        </table>
+
+	<?php
     /***
      *
      * TABLAS DE VISTAS POR VIDEO
@@ -201,7 +316,7 @@ add_action( 'wp_enqueue_scripts', 'wp_enqueue_scripts__youtube_api' );
     ?>
     <br>
         <button onclick="history.back()" style="background-color: #76082b; border: none; color: white; cursor: pointer; padding: 5px 10px;">Regresar</button>
-        <p style="font-size: 30px; margin-top: 5px">Video: <i><u><?php echo get_the_title($videoID); ?></i></u> </p>
+        <p style="font-size: 30px; margin-top: 5px">Video: <i><u><?php echo get_the_title($videoID); ?></u></i> </p>
         <table style="width: 100%; text-align: center;">
             <thead style="background: black; color: white;">
                 <th>
@@ -286,7 +401,7 @@ add_action( 'wp_enqueue_scripts', 'wp_enqueue_scripts__youtube_api' );
 
                                 foreach ($videosViewed as $video):?>
                                 <tr>
-                                    <td style="text-align: center;"><?php echo get_user_by('id', $video->user_id)->display_name; ?></td>
+									<td style="text-align: center;"><a href="<?php echo get_home_url().'/wp-admin/admin.php?page=expopyme-analytics&user_id='.$video->user_id;  ?>"><?php echo get_user_by('id', $video->user_id)->display_name; ?></a></td>
                                     <td style="text-align: center;"><?php echo get_user_by('id', $video->user_id)->user_email; ?></td>
                                     <td style="text-align: center;"><?php $date = new DateTime($videosViewed->date); echo $date->format('d-m-Y');?> </td>
                                 </tr>

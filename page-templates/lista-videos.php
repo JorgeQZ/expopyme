@@ -4,6 +4,8 @@
  */
 
 get_header();
+$current_url = home_url( add_query_arg( array(), $wp->request ) );
+
 ?>
 <div class="modal-loggin">
     <div class="box">
@@ -11,7 +13,7 @@ get_header();
             <div class="close-loggin">+</div>
             <p>Para ver el contenido de<br>este video debes</p>
             <div class="text-center d-flex align-items-center" style="justify-content: center;">
-                <a href="<?php echo get_home_url().'/login' ?>"  id="home-reg" class="btn-per-4 fw-700 mayusculas ">Iniciar Sesión</a><br>
+                <a href="<?php echo esc_url( wp_login_url( $current_url ) ); ?>"  id="home-reg" class="btn-per-4 fw-700 mayusculas ">Iniciar Sesión</a><br>
             </div>
         </div>
     </div>

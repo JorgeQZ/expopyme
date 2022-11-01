@@ -6,7 +6,11 @@
  *
  * @package expopyme
  */
+global $wp;
+$current_url = home_url( add_query_arg( array(), $wp->request ) );
+$redirect_url = basename($_SERVER['REQUEST_URI']);
 ?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -147,10 +151,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></!--noscri
 			</div>
 
 	        <div class="ml-auto d-flex align-items-center col-3">
+				<?php if(!is_user_logged_in(  )):?>
 				<div class="text-center px-3 d-flex align-items-center px-4">
-					<a href="<?php echo get_home_url().'/login' ?>"  id="home-reg-header" class="btn-per-4 fw-700 mayusculas ">Inicia Sesión</a><br>
+					<a href="<?php echo esc_url( wp_login_url( $current_url.'/'.$redirect_url ) ); ?>"  id="home-reg-header" class="btn-per-4 fw-700 mayusculas ">Inicia Sesión</a>
 				</div>
-
+				<?php
+				else:
+					$current_user = wp_get_current_user();
+					?>
+					<div class="text-center px-4">
+						<div class="btn-per-4 fw-700 mayusculas d-flex align-items-center ">
+							<?php
+							echo 'Hola, '.$current_user->display_name;
+							echo '<img class="button-thumbnail" src="'.get_avatar_url($current_user->ID).'">';
+							?>
+						</div>
+						<small><a id="close-session" href="<?php echo get_home_url().'/wp-login.php?action=logout&redirect_to='.$current_url.'/'.$redirect_url; ?>">Cerrar sesión</a></small>
+					</div>
+				<?php endif; ?>
 	        </div>
 	     </div>
 
@@ -164,6 +182,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></!--noscri
 	</header>
 
 	<?php
+	// echo '<pre>';
+	// print_r($current_user);
+	// echo '</pre>';
+
 		$home = 0;
 	    if(is_home())
 	    	$home = 1;

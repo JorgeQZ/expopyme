@@ -1,20 +1,4 @@
 $ = jQuery;
-$(document).ready(function () {
-    $('.filter__button-eje').on('click', function (e) {
-        e.preventDefault();
-        $('.filter__button-eje').removeClass('active');
-        $('.video-titulo').text($(this).text()).show();
-        $(this).addClass('active');
-        let eje = $(this).attr('data-filter');
-        $('.item').hide();
-        $(".item[data-eje='" + eje + "']").show();
-    });
-
-    $('.close-loggin').on('click', function (e) {
-        $('.modal-loggin').removeClass('active');
-    });
-});
-
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
         sURLVariables = sPageURL.split('&'),
@@ -30,16 +14,41 @@ var getUrlParameter = function getUrlParameter(sParam) {
     }
 };
 
-var tech = getUrlParameter('eje');
+let ejeURL, videoIdUrl;
+ejeURL = getUrlParameter('eje');
+videoIdUrl = getUrlParameter('vid');
 
-if (tech) {
+if (videoIdUrl) {
+    const videoToView = document.getElementById(videoIdUrl);
+    console.log(videoToView);
+    videoToView.scrollIntoView();
+}
+
+if (ejeURL) {
     $('.filter__button-eje').removeClass('active');
-    $('.video-titulo').text($(".filter__button-eje[data-filter='" + tech + "']").text()).show();
-    $(".filter__button-eje[data-filter='" + tech + "']").addClass('active');
+    $('.video-titulo').text($(".filter__button-eje[data-filter='" + ejeURL + "']").text()).show();
+    $(".filter__button-eje[data-filter='" + ejeURL + "']").addClass('active');
 
     $('.item').hide();
-    $(".item[data-eje='" + tech + "']").show();
+    $(".item[data-eje='" + ejeURL + "']").show();
 }
+
+$(document).ready(function () {
+    $('.filter__button-eje').on('click', function (e) {
+        e.preventDefault();
+        $('.filter__button-eje').removeClass('active');
+        $('.video-titulo').text($(this).text()).show();
+        $(this).addClass('active');
+        let eje = $(this).attr('data-filter');
+        $('.item').hide();
+        $(".item[data-eje='" + eje + "']").show();
+        updateRedirectURL(eje, videoIdUrl);
+    });
+
+    $('.close-loggin').on('click', function (e) {
+        $('.modal-loggin').removeClass('active');
+    });
+});
 
 let divPlayer, player, timer, timeSpent = [], display = document.getElementById('display'), modalVideo, currentVideoID, currentSecInit, currentSecPlayed = 0, currentSecPlayedToSave, minimunSecstoSaveView = 900, playerElements, isClosingTab = false, sameVideoSaved = false, userLogged;
 
@@ -114,7 +123,7 @@ function recordView(videoID) {
  * Revisa si el usuario está loggeado
  */
 function isUserLogged(div) {
-    console.log(userLogged);
+
     if (userLogged === undefined) {
         $.ajax({
             type: 'POST',
@@ -132,6 +141,8 @@ function isUserLogged(div) {
                     iframe.setAttribute('allow', 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture');
                     div.parentNode.replaceChild(iframe, div);
 
+                    updateRedirectURL(null, ($(div).attr('data-video-id')));
+
                     player = new YT.Player($(div).attr('data-video-id'), {
                         height: '350',
                         videoId: $(div).attr('data-yt-id'),
@@ -139,18 +150,22 @@ function isUserLogged(div) {
                         color: 'white',
                         rel: 0,
                         events: {
-                            // 'onReady': onPlayerReady,
                             'onStateChange': onPlayerStateChange
                         }
                     })
                 } else {
                     userLogged = false;
+                    updateRedirectURL(null, ($(div).attr('data-video-id')));
                     $('.modal-loggin').addClass('active');
                 }
             }
         });
     } else if (!userLogged) {
+        console.log($(div).attr('data-video-id'));
+        updateRedirectURL(null, ($(div).attr('data-video-id')));
+
         $('.modal-loggin').addClass('active');
+
     } else {
         var iframe = document.createElement('iframe');
         iframe.setAttribute('src', 'https://www.youtube.com/embed/' + $(div).attr('data-yt-id') + '?autoplay=0&rel=0&enablejsapi=1&color=white');
@@ -158,6 +173,8 @@ function isUserLogged(div) {
         iframe.setAttribute('allowfullscreen', '1');
         iframe.setAttribute('allow', 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture');
         div.parentNode.replaceChild(iframe, div);
+
+        updateRedirectURL(null, ($(div).attr('data-video-id')));
 
         player = new YT.Player($(div).attr('data-video-id'), {
             height: '350',
@@ -208,3 +225,33 @@ window.addEventListener('beforeunload', (e) => {
     currentVideoBeforePause.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
     return e.returnValue = "Are you sure you want to exit?";
 });
+
+function updateRedirectURL(eje, vid) {
+    let refresh, _eje, _vid;
+
+    if (!eje) {
+        _eje = getUrlParameter('eje');
+    } else {
+        _eje = eje;
+    }
+
+    if (!vid) {
+        _vid = getUrlParameter('vid');
+    } else {
+        _vid = vid;
+    }
+
+    if (_eje && _vid) {
+        refresh = window.location.protocol + "//" + window.location.host + window.location.pathname + '?eje=' + _eje + '&vid=' + _vid;
+    } else if (_eje && !_vid) {
+        refresh = window.location.protocol + "//" + window.location.host + window.location.pathname + '?eje=' + _eje;
+    } else {
+        refresh = window.location.protocol + "//" + window.location.host + window.location.pathname + '?vid=' + _vid;
+    }
+
+    console.log(refresh);
+    window.history.pushState({ path: refresh }, '', refresh);
+    $('#home-reg-header').attr('href', window.location.protocol + "//" + window.location.host + '/expopyme/wp-login.php?redirect_to=' + encodeURIComponent(refresh));
+    $('#home-reg').attr('href', window.location.protocol + "//" + window.location.host + '/expopyme/wp-login.php?redirect_to=' + encodeURIComponent(refresh));
+    $('#close-session').attr('href', window.location.protocol + "//" + window.location.host + '/expopyme/wp-login.php?action=logout&redirect_to=' + encodeURIComponent(refresh));
+}

@@ -10,6 +10,16 @@ License URI: license.txt
 Tags: none
 */
 
+/**
+2022
+*/
+
+.button-thumbnail {
+	width: 20px;
+	height: 20px;
+	margin-left: 5px;
+}
+
 /* Global
 ----------------------------------------------- */
 body {
